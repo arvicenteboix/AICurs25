@@ -19,8 +19,8 @@ toque-title: Contenidos
 
 # Cabeceras y pies
 header-left: 2. Herramientas GPT
-header-right: Curso 2023-2024
-footer-left: CEFIRE Valencia
+header-right: Curso 2024-2025
+footer-left: CEFIRE FP
 footer-right: \thepage/\pageref{LastPage}
 
 # Imágenes

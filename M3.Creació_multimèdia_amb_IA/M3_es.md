@@ -1,15 +1,15 @@
 ---
 # Información general del documento
 title: 3. Creación multimedia con IA
-lang: can
+lang: es
 page-background: img/bg.png
 
 # Portada
 titlepage: true
 titlepage-rule-height: 2
-titlepage-rule-color: AA0000
-titlepage-texto-color: AA0000
-titlepage-background: U3.png
+titlepage-rule-color: eeeee4
+titlepage-text-color: eeeee4
+titlepage-background: img/U3c.png
 
 # Tabla de contenidos
 toque: true
@@ -18,8 +18,8 @@ toque-title: Contenidos
 
 # Cabeceras y pies
 header-left: 3. Creación multimedia con IA
-header-right: Curso 2023-2024
-footer-left: CEFIRE Valencia
+header-right: Curso 2024-2025
+footer-left: CEFIRE FP
 footer-right: \thepage/\pageref{LastPage}
 
 # Imágenes
@@ -67,7 +67,7 @@ pandoc-latex-environment:
 
 Este documento está sujeto a una licencia creative commons que permite su difusión y uso comercial reconociendo siempre la autoría de su creador. Este documento se encuentra para ser modificado en el siguiente repositorio de github:
 <!-- CANVIAR L'ENLLAÇ -->
-[https://github.com/arvicenteboix/AIcurscefire](https://github.com/arvicenteboix/AIcurscefire)
+[https://github.com/arvicenteboix/AICurs25](https://github.com/arvicenteboix/AICurs25)
 \newpage
 
 
