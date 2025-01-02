@@ -3,12 +3,13 @@
 title: 1. Introducción. Conceptos iniciales
 lang: es
 page-background: img/bg.png
+linkcolor: blue
 
 # Portada
 titlepage: true
 titlepage-rule-height: 2
 titlepage-rule-color: eeeee4
-titlepage-texto-color: eeeee4
+titlepage-text-color: eeeee4
 titlepage-background: img/U1c.png
 
 # Tabla de contenidos

@@ -1,15 +1,16 @@
 ---
 # Información general del documento
 title: 2. Herramientas GPT
-lang: can
+lang: es
 page-background: img/bg.png
+linkcolor: blue
 
 # Portada
 titlepage: true
 titlepage-rule-height: 2
-titlepage-rule-color: AA0000
-titlepage-texto-color: AA0000
-titlepage-background: U2.png
+titlepage-rule-color: eeeee4
+titlepage-text-color: eeeee4
+titlepage-background: img/U2c.png
 
 # Tabla de contenidos
 toque: true
@@ -61,73 +62,72 @@ pandoc-latex-environment:
 
 <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{greatest}} -->
 
-\vspace{\fill}
+\vspace*{\fill}
 
 ![](img/cc.png){ height=50px }
 
 Este documento está sujeto a una licencia creative commons que permite su difusión y uso comercial reconociendo siempre la autoría de su creador. Este documento se encuentra para ser modificado en el siguiente repositorio de github:
 <!-- CANVIAR L'ENLLAÇ -->
-[https://github.com/arvicenteboix/AIcurscefire](https://github.com/arvicenteboix/AIcurscefire)
+[https://github.com/arvicenteboix/AICurs25](https://github.com/arvicenteboix/AICurs25)
 \newpage
 
 # Introducción
 
-En esta unidad nos centraremos en aquellas aplicaciones de las que todo el mundo habla. Y, por supuesto, aquellas que pueden facilitarnos más la tarea como docentes. Sin embargo, es importante destacar que el objetivo de este curso no es explorar todo el potencial de las herramientas GPT para los docentes, sino tener un primer contacto con estas herramientas.
+En esta unidad nos vamos a centrar ya en aquellas aplicaciones de las que todo el mundo habla. Y, cómo no, aquellas que, en esencia, más nos pueden facilitar la tarea como docentes. Es importante insistir que el objetivo de este curso no trata de ver cuál es todo el potencial de las herramientas GPT para los docentes, sino de tener un primer contacto con estas herramientas.
 
-Cabe mencionar que nos hemos centrado en la parte gratuita de estas herramientas, pero es importante señalar que la versión de pago ofrece mejores resultados y presenta funcionalidades muy convenientes para nuestra tarea, como la creación de GPTs.
-
+Cabe decir que nos hemos centrado en la parte gratuita de estas herramientas, pero la versión de pago da mejores resultados y presenta funcionalidades muy convenientes para nuestra tarea, como la de crear GPTs.
 
 # ¿Qué es GPT?
 
-GPT es una sigla que significa "Generative Pre-trained Transformers". Es una tecnología que ayuda a las máquinas a entender el lenguaje humano y a responder a preguntas de manera parecida a cómo lo haría una persona, es más, podemos interactuar con ella. Esto significa que las máquinas pueden escribir textos, resumir información, hacer traducciones y algunas cosas más que veremos más adelante. Esto es posible gracias a una red neuronal que ha aprendido a partir de muchos datos y que puede generar contenido nuevo a partir del que ha aprendido. GPT es una tecnología muy útil para muchas cosas diferentes, es más, cada vez que habláis con ella está aprendiendo de aquello que habla con vosotros, así que cada vez tendrá mejores respuestas.
+GPT es un acrónimo que significa "Generative Pre-trained Transformers" (Transformadores Generativos Preentrenados). Es una tecnología que ayuda a las máquinas a entender el lenguaje humano y a responder preguntas de manera similar a como lo haría una persona, además podemos interactuar con ella. Esto significa que las máquinas pueden escribir textos, resumir información, hacer traducciones y algunas cosas más que veremos más adelante. Esto es posible gracias a una red neuronal que ha aprendido a partir de muchos datos y que puede generar contenido nuevo partiendo de lo que ha aprendido. GPT es una tecnología muy útil para muchas cosas diferentes; además, cada vez que hablas con ella está aprendiendo de lo que hablas, así que según avanza el tiempo, tiene mejores respuestas.
 
 # MODELOS GPT
 
-Los tres servicios más conocidos, aunque no son los únicos son ChatGPT, Gemini[^1] y Copilot. Nosotros nos centraremos en estos 3. En esencia, son ventanas de chat, aunque la implementación de cada una refleja un lenguaje de diseño diferente. **Gemini** es la más minimalista, mientras que **Bing Copilot** es la menos sencilla y se centra más en la funcionalidad.
+Los tres servicios más conocidos, aunque no son los únicos, son ChatGPT, Gemini y Copilot. Nosotros nos centraremos en estos 3. En esencia, son ventanas de chat, aunque la implementación de cada una refleja un lenguaje de diseño diferente. **Gemini** es la más minimalista, mientras que **Bing Copilot** es la menos sencilla y se centra más en la funcionalidad.
 
-En cuanto a las capacidades de cada una, **ChatGPT** es mejor para conversar, mientras que **Bing Copilot** es más adecuada para investigar. Por ejemplo, puede buscar en la web y proporcionar resultados de búsqueda, mientras que **ChatGPT** se centra en responder preguntas y mantener una conversación fluida.
+En cuanto a las capacidades de cada una, antes podríamos decir que **ChatGPT** es mejor para conversar, mientras que **Bing Copilot** es más adecuada para investigar. Por ejemplo, puede buscar en la web y proporcionar resultados de búsqueda, mientras que **ChatGPT** se centra en responder preguntas y mantener una conversación fluida. Pero estas diferencias se van reduciendo con el tiempo y, la mejor opción dependerá de la experiencia que tengan con las diferentes herramientas.
 
-Además, **Bing Copilot** es lo más transparente, puesto que al final de cada respuesta pone las fuentes de dónde ha obtenido la información. Por otro lado, **Google Gemini** tiene una opción para hacer una búsqueda de la pregunta que has hecho, y **ChatGPT** no ofrece ninguna pista de dónde ha sacado la información.
-
-[^1]: En el transcurso de la creación de estos materiales ha cambiado su nombre a Gemini. Antes se llamaba **Bard**.
-
-:::info
-Obviamente esta información está basada en experiencia personal y la lectura de algunos artículos que van dándote una idea de las características de cada uno. Se trata de diferentes modelos (importante lo de diferentes) que van creciendo con el tiempo.
+:::note
+Obviamente, esta información está basada en experiencia personal y en la lectura de algunos artículos que te dan una idea de las características de cada uno. Se trata de diferentes modelos (importante el hecho de ser diferentes) que van creciendo con el tiempo.
 
 (1) [https://www.androidauthority.com/chatgpt-vs-bing-chat-3292126/](https://www.androidauthority.com/chatgpt-vs-bing-chat-3292126/)
 (2) [https://zapier.com/blog/chatgpt-vs-bard/](https://zapier.com/blog/chatgpt-vs-bard/)
 :::
 
+
+
+
+
 ## ChatGPT
 
-Para poder utilizar chatGPT, en primer lugar tenemos de registrarnos. Iremos a la página de [ChatGPT](https://chat.openai.com/auth/login)
+Para poder utilizar ChatGPT, primero debemos registrarnos. Iremos a la página de [ChatGPT](https://chat.openai.com/auth/login)
 
 ![Registrarse en ChatGPT](img/1.png)
 
-Después debemos ingresar algunos datos o, si estás conectado en el navegador con una cuenta de Google, iniciar sesión con ella:
+Después debemos introducir unos datos o si estás conectado en el navegador con una cuenta de Google, entras con ella:
 
 ![Registrarse en ChatGPT](img/2.png)
 
-Una vez ya te hayas registrado podrás acceder directamente a la página de chatGPT para empezar, y ya le podemos plantear una cuestión:
+Una vez te hayas registrado podrás acceder directamente a la página de ChatGPT para empezar, y ya podemos plantearle una cuestión:
 
 [https://chat.openai.com/](https://chat.openai.com/)
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Qué IA es mejor, ChatGPT, Gemini o Copilot}\hfill \break
-Como que no especifica sobre qué quiere una respuesta, ofreceré una respuesta general. La idoneidad de una Inteligencia Artificial (IA) depende mucho del contexto, las necesidades y los objetivos específicos de la situación. Hay diferentes tipos de IA, como por ejemplo sistemas de procesamiento de lenguaje natural, sistemas de visión por computador, IA para análisis de datos, entre otros.
+Como no especifica sobre qué quiere una respuesta, ofreceré una respuesta general. La idoneidad de una Inteligencia Artificial (IA) depende mucho del contexto, las necesidades y los objetivos específicos de la situación. Hay diferentes tipos de IA, como sistemas de procesamiento de lenguaje natural, sistemas de visión por computador, IA para análisis de datos, entre otros.
 
-Para determinar qué IA es la más idónea, se tienen que tener en cuenta varios factores, como por ejemplo la complejidad del problema, los recursos disponibles, las capacidades de la IA en cuestión y otras consideraciones técnicas y prácticas.
+Para determinar qué IA es la más idónea, se deben tener en cuenta varios factores, como la complejidad del problema, los recursos disponibles, las capacidades de la IA en cuestión y otras consideraciones técnicas y prácticas.
 
-Algunos de los sistemas de IA más conocidos incluyen OpenAI's GPT, Google's TensorFlow, y Microsoft's Azure Cognitive Services, pero hay otros muchos proveedores de IA y tecnologías disponibles.
+Algunos de los sistemas de IA más conocidos incluyen OpenAI's GPT, Google's TensorFlow, y Microsoft's Azure Cognitive Services, pero hay muchos otros proveedores de IA y tecnologías disponibles.
 
 Por lo tanto, para elegir la IA más idónea, es importante evaluar las necesidades particulares de tu proyecto o aplicación y comparar las capacidades y las limitaciones de las diferentes opciones disponibles.}
 
 ![Respuesta de ChatGPT](img/3.png)
 
-Podemos ver que debajo de cada respuesta hay 4 iconos que nos permitirán valorar la respuesta, copiar el texto para después pegarlo donde queramos o podemos decirle que vuelva a regenerar la respuesta.
+Podemos ver que debajo de cada respuesta hay 4 iconos que nos permitirán valorar la respuesta, copiar el texto para después pegarlo donde nos haga falta o que vuelva a regenerar la respuesta.
 
 ## Bing Copilot
 
-Para poder utilizar la herramienta de IA de Microsoft, en principio, no es necesario registrarnos, podemos utilizarla directamente desde el navegador, podemos ir directamente a la página de [Bing](https://www.bing.com/) y ya podremos utilizar directamente la herramienta. Hagamos clic sobre el enlace *chat*":
+Para poder utilizar la herramienta de IA de Microsoft no hace falta registrarse, podemos utilizarla directamente desde el navegador, podemos ir directamente a la página de [Bing](https://www.bing.com/) y ya podremos utilizar directamente la herramienta. Hacemos clic sobre el enlace "chat":
 
 ![Bing Copilot](img/4.png)
 
@@ -136,12 +136,12 @@ Nos aparecerá esta pantalla y ya podemos preguntar directamente:
 ![Bing Copilot chat](img/5.png)
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Qué IA es mejor, ChatGPT, Gemini o Copilot}\hfill \break
-Gracias por tu pregunta. Como que tu mensaje está escrito en valenciano, responderé en valenciano.
-Hay muchas IA de chat para elegir, y la mejor depende de lo que busques. Según una comparación reciente de Tom's Guide, ChatGPT Plus y Copilot Pro son dos de las mejores opciones disponibles. Los dos utilizan la misma tecnología subyacente que impulsa el chatbot de OpenAI. Los dos también cobran el mismo precio por mes, 20 dólares. Copilot Pro incluye acceso en todas las funciones de 365 Copilot, cosa que lo diferencia de ChatGPT Plus. Google también lanzará Gemini Advanced, una versión premium del chatbot que estará impulsada por el nuevo modelo Gemini Ultra más adelante este año. Pero, si buscas una IA de chat gratuita, quizás querrás probar otras opciones como Poe, Perplexity AI o Pi.
+Gracias por tu pregunta. Como tu mensaje está escrito en valenciano, responderé en valenciano.
+Hay muchas IA de chat para elegir, y la mejor depende de lo que busques. Según una comparación reciente de Tom's Guide, ChatGPT Plus y Copilot Pro son dos de las mejores opciones disponibles. Ambos utilizan la misma tecnología subyacente que impulsa el chatbot de OpenAI. Los dos también cobran el mismo precio por mes, 20 dólares. Copilot Pro incluye acceso a todas las funciones de 365 Copilot, lo que lo diferencia de ChatGPT Plus. Google también lanzará Gemini Advanced, una versión premium del chatbot que estará impulsada por el nuevo modelo Gemini Ultra más adelante este año. Pero, si buscas una IA de chat gratuita, quizás quieras probar otras opciones como Poe, Perplexity AI o Pi.
 
 Espero que esto te ayude a elegir la mejor IA de chat para tus necesidades.
 
-Origen: Conversación cono Bing, 25/1/2024
+Origen: Conversación con Bing, 25/1/2024
 }
 
 ![Bing Copilot chat](img/6.png)
@@ -150,39 +150,68 @@ Podemos ver que la respuesta que nos da es bastante diferente a la que nos ha of
 
 ## Gemini
 
-En este caso tendremos que ir a la página de [Gemini](https://gemini.google.com/app). Del mismo modo hará falta que te crees una cuenta de Google y entres con esta cuenta, sino no la podrás utilizar.
+En este caso tendremos que ir a la página de [Gemini](https://Gemini.google.com/chat). De la misma manera será necesario que te crees una cuenta de Google y entres con esta cuenta, si no no la podrás utilizar.
 
 ![Gemini chat](img/7.png)
 
-Del mismo modo probaremos con Gemini qué piensa de sus compañeros:
+De la misma manera probaremos con Gemini qué piensa de sus compañeros:
 
 ![Gemini chat](img/8.png)
 
-En este caso no vamos a transcribir toda la respuesta porque es más larga que las otras, pero hay que destacar algunas cosas interesantes de esta interfaz (que no modelo).
+En este caso no vamos a transcribir toda la respuesta porque es más larga que las otras, pero cabe destacar algunas cosas interesantes de esta interfaz (que no modelo).
 
 * Nos permite al igual que las otras valorar la respuesta o regenerarla.
 * Pero podemos ver que ya ha diseñado 3 versiones.
 * La respuesta ha sido mucho más rápida que en las otras dos.
-* Nos proporciona el icono de Google por sí queremos ampliar información.
-* Nos da la referencia sobre el texto de dónde ha sacado la información.
+* Nos proporciona el icono de Google por si queremos ampliar información.
+* Nos da la referencia sobre el texto de donde ha sacado la información si lo solicitamos.
 
 ## Otros modelos conocidos
 
 Aunque estos son los 3 modelos más conocidos, hay otros modelos de herramientas GPT que se pueden utilizar gratuitamente. A continuación, se presentan algunos ejemplos:
 
-- **TextCortex** es una herramienta basada en GPT-4 que permite generar texto, traducir idiomas, escribir diferentes tipos de contenido creativo y responder preguntas de manera informativa. Ofrece un plan gratuito con un límite de 200 caracteres por generación. Podemos acceder des [de aquí](https://app.textcortex.com)
-- **Writesonic** es una herramienta de redacción automatizada que utiliza GPT-3 para generar contenido de alta calidad, como por ejemplo artículos, anuncios, guiones, piezas musicales, correos electrónicos, cartas, etc. Ofrece un plan gratuito con un límite de 10 creaciones por día. Podemos acceder des [de aquí](https://app.writesonic.com/)
-- **Jasper** (antes Jarvis) es otra herramienta de redacción automatizada que utiliza GPT-3. Ofrece un plan gratuito con un límite de 10.000 palabras en el mes. Podemos acceder des [de aquí](https://app.jasper.ai/)
-- **Copy AI** es una herramienta de creación de contenido que utiliza GPT-3 para generar textos, anuncios, guiones, piezas musicales, correos electrónicos, cartas, etc. Ofrece un plan gratuito con un límite de 10 creaciones por día. Podemos acceder des [de aquí](https://www.copy.ai/)
-- **Rytr** es una herramienta de redacción automatizada que utiliza GPT-3. Ofrece un plan gratuito con un límite de 50 creaciones por día. Podemos acceder des [de aquí](https://rytr.me/)
-- **Poe** otro chatbot de propósito general, tiene una limitación de ciertas cuestiones en el día. Puedes acceder desde aquí: [https://poe.com/login](https://poe.com/login)
-- **Ora.sh** Con datos hasta 2021, es otro modelo de lenguaje: [https://ora.ai/openai/gpt4](https://ora.ai/openai/gpt4)
+- **Perplexity AI** es una herramienta de generación de textos que utiliza GPT-3 para generar contenido creativo, como artículos, anuncios, guiones, piezas musicales, correos electrónicos, cartas, etc. Permite hacer consultas rápidas. Puedes acceder desde [aquí](https://perplexity.ai/)
+- **TextCortex** es una herramienta basada en GPT-4 que permite generar texto, traducir idiomas, escribir diferentes tipos de contenido creativo y responder preguntas de manera informativa. Ofrece un plan gratuito con un límite de 200 caracteres por generación. Podemos acceder desde [aquí](https://app.textcortex.com)
+- **Writesonic** es una herramienta de redacción automatizada que utiliza GPT-3 para generar contenido de alta calidad, como artículos, anuncios, guiones, piezas musicales, correos electrónicos, cartas, etc. Ofrece un plan gratuito con un límite de 10 creaciones por día. Podemos acceder desde [aquí](https://app.writesonic.com/)
+- **Jasper** (antes Jarvis) es otra herramienta de redacción automatizada que utiliza GPT-3. Ofrece un plan gratuito con un límite de 10.000 palabras al mes. Podemos acceder desde [aquí](https://app.jasper.ai/)
+- **Copy AI** es una herramienta de creación de contenido que utiliza GPT-3 para generar textos, anuncios, guiones, piezas musicales, correos electrónicos, cartas, etc. Ofrece un plan gratuito con un límite de 10 creaciones por día. Podemos acceder desde [aquí](https://www.copy.ai/)
+- **Rytr** es una herramienta de redacción automatizada que utiliza GPT-3. Ofrece un plan gratuito con un límite de 50 creaciones por día. Podemos acceder desde [aquí](https://rytr.me/)
+- **Poe** otro chatbot de propósito general, tiene una limitación de ciertas cuestiones al día. Puedes acceder desde aquí: [https://poe.com/login](https://poe.com/login)
+- **Ora.sh** Con datos hasta 2021 es otro modelo de lenguaje [https://ora.ai/openai/gpt4](https://ora.ai/openai/gpt4)
 
-Especial mención a **Code llama 2** [https://ai.meta.com/llama/](https://ai.meta.com/llama/) se trata de un modelo de IA que puedes descargar en tu ordenador, pero requiere de conocimientos técnicos un poco avanzados para poder hacerlo funcionar y una máquina muy potente. Pero tendremos nuestro propio modelo de lenguaje en nuestro ordenador.
+Especial mención a **Code llama 2** [https://ai.meta.com/llama/](https://ai.meta.com/llama/) se trata de un modelo de IA que puedes descargar en tu ordenador, pero requiere conocimientos técnicos un poco avanzados para poder hacerlo funcionar y una máquina bastante potente. Pero tendremos nuestro propio modelo de lenguaje en nuestro ordenador. Hablaremos de ella en el último punto de esta unidad.
 
-Además de estas herramientas, también hay una serie de proyectos de código abierto que utilizan GPT-3. Por ejemplo, [**GPT-3 Playground**](https://platform.openai.com/playground?assistant=new) es una herramienta web que permite experimentar con GPT-3 de forma gratuita.
+Como puedes ver, la disponibilidad de herramientas GPT gratuitas es muy grande y cada vez hay más oferta disponible. Esto facilita a los usuarios el acceso a las capacidades de estos modelos de lenguaje sin tener que pagar una suscripción.
 
-Cómo puedes ver, la disponibilidad de herramientas GPT gratuitas es muy grande y cada vez hay más oferta disponible. Esto facilita a los usuarios el acceso a las capacidades de estos modelos de lenguaje sin tener que pagar una suscripción.
+:::important
+Hemos visto que todas ellas presentan una versión de pago. En principio en la mayoría de los casos no es necesario hacer ningún pago. La versión de pago nos permitirá acceder a otros modelos más amplios y tener menores limitaciones. Cuando utilicemos el modelo Llama al final de la unidad veremos que lo que estamos pagando finalmente es capacidad de procesamiento.
+:::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Entonces, qué herramienta tengo que elegir
 
@@ -223,7 +252,7 @@ Las estructuras modulares son una manera eficaz de crear prompts claros y sencil
 
 - **TAG**: La estructura TAG (Task, Action, Goal) es una herramienta que se puede utilizar para definir tareas y objetivos claros y sencillos. La estructura TAG se compone de tres elementos:
 
-    - ***Tarea**: La tarea que se tiene que realizar.
+    - **Tarea**: La tarea que se tiene que realizar.
     - **Acción**: La acción que se tiene que llevar a cabo para completar la tarea.
     - **Objetivo**: El objetivo final de la tarea.
 
@@ -280,6 +309,64 @@ Algunos Chatbots no tienen toda la información actualizada a 2024 y pueden dart
 
 ![Rey o reina?](img/10.png)
 
+
+## Estrategias de prompts y respuestas
+
+Aquí te proporcionamos algunos ejemplos de prompts que puedes utilizar para generar respuestas de la IA:
+
+### Zero-shot prompt
+
+* **Pregunta**: ¿Qué es la fotosíntesis?
+* **Respuesta Generada**: La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía química, utilizando dióxido de carbono y agua para producir glucosa y oxígeno.
+
+### Few-shot prompt
+
+El prompt de Few-shot se refiere a la capacidad de la IA para generar respuestas con solo un par de ejemplos o datos de entrada. Este tipo de prompt es útil para generar respuestas con una pequeña cantidad de información.
+
+* **Pregunta**: ¿Cuáles son las capitales de los países europeos?
+* **Entrada (Few-shot)**: Las capitales de Francia y España son París y Madrid respectivamente.
+* **Respuesta Generada**: Las capitales de Francia, España y Alemania son París, Madrid y Berlín respectivamente.
+
+### Chain of thoughts prompt
+
+Los modelos actuales ya pueden generar respuestas basadas en una cadena de pensamientos. Esto significa que la IA puede generar respuestas cohesivas y lógicas basadas en una secuencia de pensamientos o ideas. Si preguntas a una IA:
+
+* ¿Cuántos días hay en 7 años? te dará una respuesta razonada.
+* En cambio si preguntas a una IA: ¿Cuántos días hay en 7 años? No me razones la respuesta, te dará el resultado.
+
+### Prompt de conocimiento generado
+
+En el prompt es necesario generar conocimiento para que la IA pueda responder. Por ejemplo, si inventamos un juego es necesario darle detalles sobre cómo se juega, cuáles son los objetivos, cómo se gana, etc.
+
+![Prompt con conocimiento generado](img/11.png)
+
+### Prompt chaining
+
+Se trata de hacer una cadena de preguntas para que la IA pueda responder a la segunda pregunta basándose en la primera respuesta.
+
+* **Primera Pregunta**: ¿Qué es la fotosíntesis?
+* **Primera Respuesta Generada**: La fotosíntesis es el proceso por el cual las plantas convierten la luz solar en energía química, utilizando dióxido de carbono y agua para producir glucosa y oxígeno.
+* **Segunda Pregunta (Chaining)**: ¿Por qué es importante la fotosíntesis?
+* **Segunda Respuesta Generada**: La fotosíntesis es importante porque produce oxígeno, que es esencial para la respiración de muchos seres vivos, y porque convierte la energía solar en energía química que es utilizada por las plantas para crecer.
+
+### Generación de recuperación aumentada (RAG)
+
+* **Documento Proporcionado**: Informe sobre las técnicas de cultivo sostenible.
+* **Pregunta**: ¿Cuáles son las técnicas de cultivo sostenible más efectivas?
+* **Respuesta Basada en el Documento**: Las técnicas de cultivo sostenible más efectivas incluyen la rotación de cultivos, el uso de cubiertas vegetales, y la implementación de sistemas de riego eficientes para conservar el agua y mejorar la salud del suelo.
+
+* Otros tipos de prompts: Además de los tipos de prompts anteriores, también hay otros tipos de prompts que se pueden utilizar para generar respuestas de la IA. Puedes encontrar toda la información [aquí](https://www.promptingguide.ai/es/techniques). Muchas de estas técnicas se utilizan empleando algún lenguaje de programación.
+
+
+
+
+
+
+
+
+
+
+
 # Creando prompts
 
 En la [siguiente página](https://www.iberestudios.como/noticias/21-prompts-o-formas-de-preguntar-a-chatgpt-para-obtener-resultados-asombrosos/) podemos encontrar una serie de ejemplos de como crear buenos prompts:
@@ -301,6 +388,139 @@ Una ilustración 8K muy detallada de una gran biblioteca cpn estanterías que va
 Ejemplo de generación de código, en este caso SQL.
 
 > Mesa departments, columnas = [DepartmentId, DepartmentName]. Mesa students, columnas = [DepartmentId, StudentId, StudentName]. Crea una consulta MySQL para todos los estudiantes del departamento de Ciencias de la Computación.
+
+
+# Descarga tu propio modelo en tu ordenador
+
+A estas alturas, es importante tener claros los conceptos de lo que es un modelo para IA. Estos modelos pueden ser: text-to-text, text-to-image, image-to-text, text-to-sql, etc. Esto es importante para poder descargar el modelo adecuado para nuestra tarea.
+
+En nuestro caso de modelos GPT, nos estamos centrando en la generación de texto. Podemos descargar modelos que nos permiten generar textos, traducciones, resúmenes, etc. Los modelos que podemos descargar no ocupan mucho espacio en nuestro ordenador, estamos hablando desde 1Gb hasta 70Gb o más. ¡Y cuidado! Cuanto más grande no significa que el modelo sea mejor; de hecho, en nuestro ordenador preferiremos modelos más sencillos para que la generación de texto sea más rápida.
+
+Algunas de las opciones que podemos utilizar para descargar el modelo son:
+
+| Aplicación | Descripción | Dónde descargar/utilizar |
+|---|---|---|
+| [**Koboldcpp**](https://github.com/LostRuins/koboldcpp) | Un marco de trabajo de código abierto que permite a los usuarios crear y personalizar sus propios modelos de lenguaje. Es altamente personalizable y ofrece gran flexibilidad. | Requiere compilación a partir del código fuente. Puedes encontrar el código en repositorios como GitHub. |
+| [**LM Studio**](https://lmstudio.ai/) | Un entorno de desarrollo integrado (IDE) diseñado específicamente para trabajar con modelos de lenguaje grandes. Ofrece herramientas para entrenar, ajustar y desplegar modelos. | Los proveedores más comunes son Hugging Face y otros servicios en la nube que ofrecen acceso a GPUs. |
+| [**AnythingLlm**](https://anythingllm.com/desktop) | Similar a lmstudio. | Los proveedores más comunes son Hugging Face y otros servicios en la nube que ofrecen acceso a GPUs. |
+| **GPT4All** | Dispone de un modelo de lenguaje de código abierto similar a GPT-3, pero diseñado para ser más pequeño y eficiente. Puede ser ejecutado en dispositivos locales. Permite conectar con OpenAI y otros proveedores. | Puedes descargar el modelo preentrenado y ejecutarlo en tu ordenador. Los repositorios más comunes son GitHub. |
+
+Una página a tener en cuenta es **Hugging Face**. Se trata de una plataforma que ofrece una gran variedad de modelos de lenguaje preentrenados para descargar y utilizar. Puedes encontrar más información en su página web: [https://huggingface.co/](https://huggingface.co/). Te da una serie de tokens para probar diferentes modelos.
+
+En esta página puedes encontrar modelos de todo tipo, desde generación de texto hasta generación de imágenes. Como ejemplo, vamos a utilizar GPT4All y LM Studio para descargar un modelo de lenguaje en nuestro ordenador y probarlo.
+
+## LM Studio
+
+Una de las cosas que más me gusta de LM Studio es que tiene muchísimos parámetros que nos pueden ayudar a entender cómo funciona un modelo de lenguaje. Además, nos permite descargar modelos image-to-text, que nos permiten poner una imagen y que nos genere un texto. Esto es muy útil para generar descripciones de las imágenes.
+En primer lugar, vamos a descargar LM Studio. Para ello, vamos a la página de [LM Studio](https://lmstudio.ai/) y hacemos clic en el botón de descargar.
+
+![Descargar LM Studio](img/12.png)
+
+Una vez descargado, nos encontraremos con una interfaz de la siguiente manera:
+
+![Interfaz LM Studio](img/13.png)
+
+Desde aquí, podemos descargar los modelos que queramos. Para ello, hacemos clic en el botón de **Download** y nos aparecerá una ventana como la siguiente:
+
+![Descargar modelo](img/14.png)
+
+Recomendamos descargar el modelo más sencillo para empezar a probarlo. Una vez descargado el modelo, podemos comenzar a utilizarlo. Para ello, hacemos clic en el botón de **Load Model** y seleccionamos el modelo que hemos descargado. Nos aparecerá una ventana como la siguiente en la que no modificaremos nada y haremos clic en el botón de **Load**.
+
+![Cargar modelo](img/15.png)
+
+Una parte importante es configurar LM Studio para que funcione correctamente en nuestro ordenador. Para ello, vamos a la pestaña de **Developer** y configuramos los parámetros de runtime. Existen 3:
+
+* CPU llama: Para que funcione con el procesador de nuestro ordenador.
+* CUDA llama: Para que funcione con la tarjeta gráfica de nuestro ordenador si es NVIDIA.
+* Vulkan llama: Para que funcione con la tarjeta gráfica de nuestro ordenador AMD.
+
+![Configuración de LM Studio](img/16.png)
+
+![Configuración de LM Studio](img/17.png)
+
+:::important
+CUDA y Vulkan son motores para hacer funcionar el modelo adecuadamente. Podemos utilizar siempre el procesador. Pero si tienes una tarjeta gráfica (cuanto más actual, mejor), estas están diseñadas para hacer muchos cálculos en paralelo y por tanto, el modelo funcionará mucho más rápidamente.
+:::
+
+### Personalizar las características de nuestro modelo
+
+Cada modelo está entrenado de una manera determinada y utilizando parámetros diferentes. Para poder personalizar nuestro modelo, vamos a la pestaña de **Settings** y podemos modificar los siguientes parámetros:
+
+* **Temperature**: Este parámetro controla la creatividad de la IA. Si aumentamos la temperatura, la IA generará respuestas más creativas y diversas. Si disminuimos la temperatura, la IA generará respuestas más conservadoras y predecibles.
+
+* **Top K**: Este parámetro controla el número de palabras que la IA considera en cada paso de generación. Si aumentamos el valor de K, la IA considerará más palabras y generará respuestas más diversas. Si disminuimos el valor de K, la IA considerará menos palabras y generará respuestas más conservadoras.
+
+* **Top P**: Este parámetro controla la probabilidad acumulada de las palabras que la IA considera en cada paso de generación. Si aumentamos el valor de P, la IA considerará más palabras y generará respuestas más diversas. Si disminuimos el valor de P, la IA considerará menos palabras y generará respuestas más conservadoras.
+
+* **Max Tokens**: (Activando Limit Response Length) Este parámetro controla el número máximo de palabras que la IA generará en cada respuesta. Si aumentamos el valor de Max Tokens, la IA generará respuestas más largas. Si disminuimos el valor de Max Tokens, la IA generará respuestas más cortas.
+
+* **Repeat Penalty**: Este parámetro controla la penalización para las repeticiones de palabras en la respuesta. Si aumentamos el valor de Repeat Penalty, la IA penalizará más las repeticiones de palabras. Si disminuimos el valor de Repeat Penalty, la IA penalizará menos las repeticiones de palabras.
+
+Existen otras configuraciones que no vamos a tratar.
+
+![Configuración de LM Studio](img/18.png)
+
+También podemos acceder desde el botón Settings en el extremo superior derecho de la pantalla.
+
+Una vez lo tenemos todo configurado, ya podemos comenzar a utilizar nuestro modelo. Para ello, escribiremos nuestro primer prompt. Hemos hecho el mismo prompt cambiando algunos parámetros para ver cómo cambia la respuesta.
+
+![Prompt de LM Studio](img/19.png)
+
+:::note
+La gran ventaja de tener el modelo en nuestro ordenador es que podré ajustarlo a nuestro gusto. Pero, a no ser que lo necesites expresamente, es más útil utilizar los modelos más comerciales. Una vez te ponga limitaciones, te dé respuestas sesgadas o quieras utilizar datos sensibles, es mejor tener el modelo en tu ordenador. Todo lo que escribes en un chatbot queda registrado y puede ser utilizado para otras cosas.
+:::
+
+## GPT4All
+
+GPT4All es otra herramienta que nos permite descargar el modelo de lenguaje en nuestro ordenador y utilizarlo sin necesidad de tener conexión a internet. Para ello, vamos a la página de [GPT4All](https://gpt4all.com/) y hacemos clic en el botón de **Download**.
+
+![Descargar GPT4All](img/20.png)
+
+![Instalar GPT4All](img/21.png)
+
+Una vez descargado, haces doble clic para instalarlo. Una vez instalado, tienes que ejecutarlo y nos aparecerá una ventana como la siguiente:
+
+![Interfaz GPT4All](img/22.png)
+
+En la interfaz inicial, nos aparecen 3 elementos que es lo que principalmente debemos configurar:
+
+1. Buscar modelos e instalarlos.
+2. Documentos locales.
+3. Iniciar chat.
+
+En primer lugar, vamos a modelos y hacemos clic en agregar modelo:
+
+![Agregar modelo](img/23.png)
+
+Escogeremos los siguientes modelos para instalar. Son bastante sencillos pero son mucho más rápidos:
+
+![Agregar modelo](img/24.png)
+
+Si vamos a Config, podemos seleccionar un modelo y configurar los parámetros tal y como hemos hecho con LM Studio.
+
+![Configurar modelo](img/25.png)
+
+También es importante configurar el motor de cálculo, en este caso CUDA, para que funcione con mi tarjeta gráfica (NVIDIA). Si no tienes tarjeta gráfica, selecciona CPU.
+
+![Configurar motor de cálculo](img/28.png)
+
+Una de las características más importantes de GPT4All es la capacidad para hacer uso de documentos locales (recordemos RAG). Para ello, vamos a la pestaña de **Datos locales** y hacemos clic en el botón de **Agregar colección de documentos**.
+
+![Agregar colección](img/26.png)
+
+Es necesario que seleccionemos una carpeta donde pondremos todos los documentos, después tardará un rato en indexarlos.
+
+![Agregar colección](img/27.png)
+
+Finalmente, haremos una pregunta a la IA. Debemos seleccionar un modelo a utilizar y una de las colecciones que tenemos:
+
+![Prompt de GPT4All](img/30.png)
+
+Podemos ver cómo nos da un resumen de la ley que aparece en el DOGCV.
+
+:::note
+En la próxima unidad veremos que existe la aplicación web chatpdf que nos permitirá hacer lo mismo.
+:::
 
 # Bibliografía
 

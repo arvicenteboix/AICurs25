@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="can" xml:lang="can" >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
 
 <head>
     <meta charset="utf-8" />
@@ -11,8 +11,11 @@
         div.columns{display: flex; gap: min(4vw, 1.5em);}
         div.column{flex: auto; overflow-x: auto;}
         div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-        ul.task-list{list-style: none;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
         ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
           width: 0.8em;
           margin: 0 0.8em 0.2em -1.6em;
           vertical-align: middle;
@@ -72,11 +75,51 @@ funcione</a></li>
 id="toc-consejos-para-crear-prompts"><span
 class="toc-section-number">4.3</span> Consejos para crear
 prompts</a></li>
+<li><a href="#estrategias-de-prompts-y-respuestas"
+id="toc-estrategias-de-prompts-y-respuestas"><span
+class="toc-section-number">4.4</span> Estrategias de prompts y
+respuestas</a>
+<ul>
+<li><a href="#zero-shot-prompt" id="toc-zero-shot-prompt"><span
+class="toc-section-number">4.4.1</span> Zero-shot prompt</a></li>
+<li><a href="#few-shot-prompt" id="toc-few-shot-prompt"><span
+class="toc-section-number">4.4.2</span> Few-shot prompt</a></li>
+<li><a href="#chain-of-thoughts-prompt"
+id="toc-chain-of-thoughts-prompt"><span
+class="toc-section-number">4.4.3</span> Chain of thoughts
+prompt</a></li>
+<li><a href="#prompt-de-conocimiento-generado"
+id="toc-prompt-de-conocimiento-generado"><span
+class="toc-section-number">4.4.4</span> Prompt de conocimiento
+generado</a></li>
+<li><a href="#prompt-chaining" id="toc-prompt-chaining"><span
+class="toc-section-number">4.4.5</span> Prompt chaining</a></li>
+<li><a href="#generación-de-recuperación-aumentada-rag"
+id="toc-generación-de-recuperación-aumentada-rag"><span
+class="toc-section-number">4.4.6</span> Generación de recuperación
+aumentada (RAG)</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#creando-prompts-1" id="toc-creando-prompts-1"><span
 class="toc-section-number">5</span> Creando prompts</a></li>
+<li><a href="#descarga-tu-propio-modelo-en-tu-ordenador"
+id="toc-descarga-tu-propio-modelo-en-tu-ordenador"><span
+class="toc-section-number">6</span> Descarga tu propio modelo en tu
+ordenador</a>
+<ul>
+<li><a href="#lm-studio" id="toc-lm-studio"><span
+class="toc-section-number">6.1</span> LM Studio</a>
+<ul>
+<li><a href="#personalizar-las-características-de-nuestro-modelo"
+id="toc-personalizar-las-características-de-nuestro-modelo"><span
+class="toc-section-number">6.1.1</span> Personalizar las características
+de nuestro modelo</a></li>
+</ul></li>
+<li><a href="#gpt4all" id="toc-gpt4all"><span
+class="toc-section-number">6.2</span> GPT4All</a></li>
+</ul></li>
 <li><a href="#bibliografía" id="toc-bibliografía"><span
-class="toc-section-number">6</span> Bibliografía</a></li>
+class="toc-section-number">7</span> Bibliografía</a></li>
 </ul>
             </div>
         </nav>
@@ -92,68 +135,62 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             siempre la autoría de su creador. Este documento se
             encuentra para ser modificado en el siguiente repositorio de
             github: <!-- CANVIAR L'ENLLAÇ --> <a
-            href="https://github.com/arvicenteboix/AIcurscefire">https://github.com/arvicenteboix/AIcurscefire</a>
+            href="https://github.com/arvicenteboix/AICurs25">https://github.com/arvicenteboix/AICurs25</a>
             </p>
             <h1 data-number="1" id="introducción"><span
             class="header-section-number">1</span> Introducción</h1>
-            <p>En esta unidad nos centraremos en aquellas aplicaciones
-            de las que todo el mundo habla. Y, por supuesto, aquellas
-            que pueden facilitarnos más la tarea como docentes. Sin
-            embargo, es importante destacar que el objetivo de este
-            curso no es explorar todo el potencial de las herramientas
-            GPT para los docentes, sino tener un primer contacto con
-            estas herramientas.</p>
-            <p>Cabe mencionar que nos hemos centrado en la parte
-            gratuita de estas herramientas, pero es importante señalar
-            que la versión de pago ofrece mejores resultados y presenta
-            funcionalidades muy convenientes para nuestra tarea, como la
-            creación de GPTs.</p>
+            <p>En esta unidad nos vamos a centrar ya en aquellas
+            aplicaciones de las que todo el mundo habla. Y, cómo no,
+            aquellas que, en esencia, más nos pueden facilitar la tarea
+            como docentes. Es importante insistir que el objetivo de
+            este curso no trata de ver cuál es todo el potencial de las
+            herramientas GPT para los docentes, sino de tener un primer
+            contacto con estas herramientas.</p>
+            <p>Cabe decir que nos hemos centrado en la parte gratuita de
+            estas herramientas, pero la versión de pago da mejores
+            resultados y presenta funcionalidades muy convenientes para
+            nuestra tarea, como la de crear GPTs.</p>
             <h1 data-number="2" id="qué-es-gpt"><span
             class="header-section-number">2</span> ¿Qué es GPT?</h1>
-            <p>GPT es una sigla que significa “Generative Pre-trained
-            Transformers”. Es una tecnología que ayuda a las máquinas a
-            entender el lenguaje humano y a responder a preguntas de
-            manera parecida a cómo lo haría una persona, es más, podemos
-            interactuar con ella. Esto significa que las máquinas pueden
-            escribir textos, resumir información, hacer traducciones y
-            algunas cosas más que veremos más adelante. Esto es posible
-            gracias a una red neuronal que ha aprendido a partir de
-            muchos datos y que puede generar contenido nuevo a partir
-            del que ha aprendido. GPT es una tecnología muy útil para
-            muchas cosas diferentes, es más, cada vez que habláis con
-            ella está aprendiendo de aquello que habla con vosotros, así
-            que cada vez tendrá mejores respuestas.</p>
+            <p>GPT es un acrónimo que significa “Generative Pre-trained
+            Transformers” (Transformadores Generativos Preentrenados).
+            Es una tecnología que ayuda a las máquinas a entender el
+            lenguaje humano y a responder preguntas de manera similar a
+            como lo haría una persona, además podemos interactuar con
+            ella. Esto significa que las máquinas pueden escribir
+            textos, resumir información, hacer traducciones y algunas
+            cosas más que veremos más adelante. Esto es posible gracias
+            a una red neuronal que ha aprendido a partir de muchos datos
+            y que puede generar contenido nuevo partiendo de lo que ha
+            aprendido. GPT es una tecnología muy útil para muchas cosas
+            diferentes; además, cada vez que hablas con ella está
+            aprendiendo de lo que hablas, así que según avanza el
+            tiempo, tiene mejores respuestas.</p>
             <h1 data-number="3" id="modelos-gpt"><span
             class="header-section-number">3</span> MODELOS GPT</h1>
             <p>Los tres servicios más conocidos, aunque no son los
-            únicos son ChatGPT, Gemini<a href="#fn1"
-            class="footnote-ref" id="fnref1"
-            role="doc-noteref"><sup>1</sup></a> y Copilot. Nosotros nos
+            únicos, son ChatGPT, Gemini y Copilot. Nosotros nos
             centraremos en estos 3. En esencia, son ventanas de chat,
             aunque la implementación de cada una refleja un lenguaje de
             diseño diferente. <strong>Gemini</strong> es la más
             minimalista, mientras que <strong>Bing Copilot</strong> es
             la menos sencilla y se centra más en la funcionalidad.</p>
-            <p>En cuanto a las capacidades de cada una,
-            <strong>ChatGPT</strong> es mejor para conversar, mientras
-            que <strong>Bing Copilot</strong> es más adecuada para
-            investigar. Por ejemplo, puede buscar en la web y
+            <p>En cuanto a las capacidades de cada una, antes podríamos
+            decir que <strong>ChatGPT</strong> es mejor para conversar,
+            mientras que <strong>Bing Copilot</strong> es más adecuada
+            para investigar. Por ejemplo, puede buscar en la web y
             proporcionar resultados de búsqueda, mientras que
             <strong>ChatGPT</strong> se centra en responder preguntas y
-            mantener una conversación fluida.</p>
-            <p>Además, <strong>Bing Copilot</strong> es lo más
-            transparente, puesto que al final de cada respuesta pone las
-            fuentes de dónde ha obtenido la información. Por otro lado,
-            <strong>Google Gemini</strong> tiene una opción para hacer
-            una búsqueda de la pregunta que has hecho, y
-            <strong>ChatGPT</strong> no ofrece ninguna pista de dónde ha
-            sacado la información.</p>
-            <div class="info">
-            <p>Obviamente esta información está basada en experiencia
-            personal y la lectura de algunos artículos que van dándote
-            una idea de las características de cada uno. Se trata de
-            diferentes modelos (importante lo de diferentes) que van
-            creciendo con el tiempo.</p>
+            mantener una conversación fluida. Pero estas diferencias se
+            van reduciendo con el tiempo y, la mejor opción dependerá de
+            la experiencia que tengan con las diferentes
+            herramientas.</p>
+            <div class="note">
+            <p>Obviamente, esta información está basada en experiencia
+            personal y en la lectura de algunos artículos que te dan una
+            idea de las características de cada uno. Se trata de
+            diferentes modelos (importante el hecho de ser diferentes)
+            que van creciendo con el tiempo.</p>
             <ol type="1">
             <li><a
             href="https://www.androidauthority.com/chatgpt-vs-bing-chat-3292126/">https://www.androidauthority.com/chatgpt-vs-bing-chat-3292126/</a></li>
@@ -163,7 +200,7 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             </div>
             <h2 data-number="3.1" id="chatgpt"><span
             class="header-section-number">3.1</span> ChatGPT</h2>
-            <p>Para poder utilizar chatGPT, en primer lugar tenemos de
+            <p>Para poder utilizar ChatGPT, primero debemos
             registrarnos. Iremos a la página de <a
             href="https://chat.openai.com/auth/login">ChatGPT</a></p>
             <figure>
@@ -171,17 +208,17 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             <figcaption aria-hidden="true">Registrarse en
             ChatGPT</figcaption>
             </figure>
-            <p>Después debemos ingresar algunos datos o, si estás
-            conectado en el navegador con una cuenta de Google, iniciar
-            sesión con ella:</p>
+            <p>Después debemos introducir unos datos o si estás
+            conectado en el navegador con una cuenta de Google, entras
+            con ella:</p>
             <figure>
             <img src="img/2.png" alt="Registrarse en ChatGPT" />
             <figcaption aria-hidden="true">Registrarse en
             ChatGPT</figcaption>
             </figure>
-            <p>Una vez ya te hayas registrado podrás acceder
-            directamente a la página de chatGPT para empezar, y ya le
-            podemos plantear una cuestión:</p>
+            <p>Una vez te hayas registrado podrás acceder directamente a
+            la página de ChatGPT para empezar, y ya podemos plantearle
+            una cuestión:</p>
             <p><a
             href="https://chat.openai.com/">https://chat.openai.com/</a></p>
             <figure>
@@ -191,16 +228,16 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             </figure>
             <p>Podemos ver que debajo de cada respuesta hay 4 iconos que
             nos permitirán valorar la respuesta, copiar el texto para
-            después pegarlo donde queramos o podemos decirle que vuelva
-            a regenerar la respuesta.</p>
+            después pegarlo donde nos haga falta o que vuelva a
+            regenerar la respuesta.</p>
             <h2 data-number="3.2" id="bing-copilot"><span
             class="header-section-number">3.2</span> Bing Copilot</h2>
-            <p>Para poder utilizar la herramienta de IA de Microsoft, en
-            principio, no es necesario registrarnos, podemos utilizarla
-            directamente desde el navegador, podemos ir directamente a
-            la página de <a href="https://www.bing.com/">Bing</a> y ya
-            podremos utilizar directamente la herramienta. Hagamos clic
-            sobre el enlace <em>chat</em>”:</p>
+            <p>Para poder utilizar la herramienta de IA de Microsoft no
+            hace falta registrarse, podemos utilizarla directamente
+            desde el navegador, podemos ir directamente a la página de
+            <a href="https://www.bing.com/">Bing</a> y ya podremos
+            utilizar directamente la herramienta. Hacemos clic sobre el
+            enlace “chat”:</p>
             <figure>
             <img src="img/4.png" alt="Bing Copilot" />
             <figcaption aria-hidden="true">Bing Copilot</figcaption>
@@ -226,21 +263,22 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             <h2 data-number="3.3" id="gemini"><span
             class="header-section-number">3.3</span> Gemini</h2>
             <p>En este caso tendremos que ir a la página de <a
-            href="https://gemini.google.com/app">Gemini</a>. Del mismo
-            modo hará falta que te crees una cuenta de Google y entres
-            con esta cuenta, sino no la podrás utilizar.</p>
+            href="https://Gemini.google.com/chat">Gemini</a>. De la
+            misma manera será necesario que te crees una cuenta de
+            Google y entres con esta cuenta, si no no la podrás
+            utilizar.</p>
             <figure>
             <img src="img/7.png" alt="Gemini chat" />
             <figcaption aria-hidden="true">Gemini chat</figcaption>
             </figure>
-            <p>Del mismo modo probaremos con Gemini qué piensa de sus
-            compañeros:</p>
+            <p>De la misma manera probaremos con Gemini qué piensa de
+            sus compañeros:</p>
             <figure>
             <img src="img/8.png" alt="Gemini chat" />
             <figcaption aria-hidden="true">Gemini chat</figcaption>
             </figure>
             <p>En este caso no vamos a transcribir toda la respuesta
-            porque es más larga que las otras, pero hay que destacar
+            porque es más larga que las otras, pero cabe destacar
             algunas cosas interesantes de esta interfaz (que no
             modelo).</p>
             <ul>
@@ -249,10 +287,10 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             <li>Pero podemos ver que ya ha diseñado 3 versiones.</li>
             <li>La respuesta ha sido mucho más rápida que en las otras
             dos.</li>
-            <li>Nos proporciona el icono de Google por sí queremos
+            <li>Nos proporciona el icono de Google por si queremos
             ampliar información.</li>
-            <li>Nos da la referencia sobre el texto de dónde ha sacado
-            la información.</li>
+            <li>Nos da la referencia sobre el texto de donde ha sacado
+            la información si lo solicitamos.</li>
             </ul>
             <h2 data-number="3.4" id="otros-modelos-conocidos"><span
             class="header-section-number">3.4</span> Otros modelos
@@ -262,60 +300,70 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             gratuitamente. A continuación, se presentan algunos
             ejemplos:</p>
             <ul>
+            <li><strong>Perplexity AI</strong> es una herramienta de
+            generación de textos que utiliza GPT-3 para generar
+            contenido creativo, como artículos, anuncios, guiones,
+            piezas musicales, correos electrónicos, cartas, etc. Permite
+            hacer consultas rápidas. Puedes acceder desde <a
+            href="https://perplexity.ai/">aquí</a></li>
             <li><strong>TextCortex</strong> es una herramienta basada en
             GPT-4 que permite generar texto, traducir idiomas, escribir
             diferentes tipos de contenido creativo y responder preguntas
             de manera informativa. Ofrece un plan gratuito con un límite
-            de 200 caracteres por generación. Podemos acceder des <a
-            href="https://app.textcortex.com">de aquí</a></li>
+            de 200 caracteres por generación. Podemos acceder desde <a
+            href="https://app.textcortex.com">aquí</a></li>
             <li><strong>Writesonic</strong> es una herramienta de
             redacción automatizada que utiliza GPT-3 para generar
-            contenido de alta calidad, como por ejemplo artículos,
-            anuncios, guiones, piezas musicales, correos electrónicos,
-            cartas, etc. Ofrece un plan gratuito con un límite de 10
-            creaciones por día. Podemos acceder des <a
-            href="https://app.writesonic.com/">de aquí</a></li>
+            contenido de alta calidad, como artículos, anuncios,
+            guiones, piezas musicales, correos electrónicos, cartas,
+            etc. Ofrece un plan gratuito con un límite de 10 creaciones
+            por día. Podemos acceder desde <a
+            href="https://app.writesonic.com/">aquí</a></li>
             <li><strong>Jasper</strong> (antes Jarvis) es otra
             herramienta de redacción automatizada que utiliza GPT-3.
-            Ofrece un plan gratuito con un límite de 10.000 palabras en
-            el mes. Podemos acceder des <a
-            href="https://app.jasper.ai/">de aquí</a></li>
+            Ofrece un plan gratuito con un límite de 10.000 palabras al
+            mes. Podemos acceder desde <a
+            href="https://app.jasper.ai/">aquí</a></li>
             <li><strong>Copy AI</strong> es una herramienta de creación
             de contenido que utiliza GPT-3 para generar textos,
             anuncios, guiones, piezas musicales, correos electrónicos,
             cartas, etc. Ofrece un plan gratuito con un límite de 10
-            creaciones por día. Podemos acceder des <a
-            href="https://www.copy.ai/">de aquí</a></li>
+            creaciones por día. Podemos acceder desde <a
+            href="https://www.copy.ai/">aquí</a></li>
             <li><strong>Rytr</strong> es una herramienta de redacción
             automatizada que utiliza GPT-3. Ofrece un plan gratuito con
-            un límite de 50 creaciones por día. Podemos acceder des <a
-            href="https://rytr.me/">de aquí</a></li>
+            un límite de 50 creaciones por día. Podemos acceder desde <a
+            href="https://rytr.me/">aquí</a></li>
             <li><strong>Poe</strong> otro chatbot de propósito general,
-            tiene una limitación de ciertas cuestiones en el día. Puedes
+            tiene una limitación de ciertas cuestiones al día. Puedes
             acceder desde aquí: <a
             href="https://poe.com/login">https://poe.com/login</a></li>
-            <li><strong>Ora.sh</strong> Con datos hasta 2021, es otro
-            modelo de lenguaje: <a
+            <li><strong>Ora.sh</strong> Con datos hasta 2021 es otro
+            modelo de lenguaje <a
             href="https://ora.ai/openai/gpt4">https://ora.ai/openai/gpt4</a></li>
             </ul>
             <p>Especial mención a <strong>Code llama 2</strong> <a
             href="https://ai.meta.com/llama/">https://ai.meta.com/llama/</a>
             se trata de un modelo de IA que puedes descargar en tu
-            ordenador, pero requiere de conocimientos técnicos un poco
-            avanzados para poder hacerlo funcionar y una máquina muy
-            potente. Pero tendremos nuestro propio modelo de lenguaje en
-            nuestro ordenador.</p>
-            <p>Además de estas herramientas, también hay una serie de
-            proyectos de código abierto que utilizan GPT-3. Por ejemplo,
-            <a
-            href="https://platform.openai.com/playground?assistant=new"><strong>GPT-3
-            Playground</strong></a> es una herramienta web que permite
-            experimentar con GPT-3 de forma gratuita.</p>
-            <p>Cómo puedes ver, la disponibilidad de herramientas GPT
+            ordenador, pero requiere conocimientos técnicos un poco
+            avanzados para poder hacerlo funcionar y una máquina
+            bastante potente. Pero tendremos nuestro propio modelo de
+            lenguaje en nuestro ordenador. Hablaremos de ella en el
+            último punto de esta unidad.</p>
+            <p>Como puedes ver, la disponibilidad de herramientas GPT
             gratuitas es muy grande y cada vez hay más oferta
             disponible. Esto facilita a los usuarios el acceso a las
             capacidades de estos modelos de lenguaje sin tener que pagar
             una suscripción.</p>
+            <div class="important">
+            <p>Hemos visto que todas ellas presentan una versión de
+            pago. En principio en la mayoría de los casos no es
+            necesario hacer ningún pago. La versión de pago nos
+            permitirá acceder a otros modelos más amplios y tener
+            menores limitaciones. Cuando utilicemos el modelo Llama al
+            final de la unidad veremos que lo que estamos pagando
+            finalmente es capacidad de procesamiento.</p>
+            </div>
             <h2 data-number="3.5"
             id="entonces-qué-herramienta-tengo-que-elegir"><span
             class="header-section-number">3.5</span> Entonces, qué
@@ -409,7 +457,7 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             definir tareas y objetivos claros y sencillos. La estructura
             TAG se compone de tres elementos:</p>
             <ul>
-            <li>*<strong>Tarea</strong>: La tarea que se tiene que
+            <li><strong>Tarea</strong>: La tarea que se tiene que
             realizar.</li>
             <li><strong>Acción</strong>: La acción que se tiene que
             llevar a cabo para completar la tarea.</li>
@@ -531,6 +579,110 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             <img src="img/10.png" alt="Rey o reina?" />
             <figcaption aria-hidden="true">Rey o reina?</figcaption>
             </figure>
+            <h2 data-number="4.4"
+            id="estrategias-de-prompts-y-respuestas"><span
+            class="header-section-number">4.4</span> Estrategias de
+            prompts y respuestas</h2>
+            <p>Aquí te proporcionamos algunos ejemplos de prompts que
+            puedes utilizar para generar respuestas de la IA:</p>
+            <h3 data-number="4.4.1" id="zero-shot-prompt"><span
+            class="header-section-number">4.4.1</span> Zero-shot
+            prompt</h3>
+            <ul>
+            <li><strong>Pregunta</strong>: ¿Qué es la fotosíntesis?</li>
+            <li><strong>Respuesta Generada</strong>: La fotosíntesis es
+            el proceso por el cual las plantas convierten la luz solar
+            en energía química, utilizando dióxido de carbono y agua
+            para producir glucosa y oxígeno.</li>
+            </ul>
+            <h3 data-number="4.4.2" id="few-shot-prompt"><span
+            class="header-section-number">4.4.2</span> Few-shot
+            prompt</h3>
+            <p>El prompt de Few-shot se refiere a la capacidad de la IA
+            para generar respuestas con solo un par de ejemplos o datos
+            de entrada. Este tipo de prompt es útil para generar
+            respuestas con una pequeña cantidad de información.</p>
+            <ul>
+            <li><strong>Pregunta</strong>: ¿Cuáles son las capitales de
+            los países europeos?</li>
+            <li><strong>Entrada (Few-shot)</strong>: Las capitales de
+            Francia y España son París y Madrid respectivamente.</li>
+            <li><strong>Respuesta Generada</strong>: Las capitales de
+            Francia, España y Alemania son París, Madrid y Berlín
+            respectivamente.</li>
+            </ul>
+            <h3 data-number="4.4.3" id="chain-of-thoughts-prompt"><span
+            class="header-section-number">4.4.3</span> Chain of thoughts
+            prompt</h3>
+            <p>Los modelos actuales ya pueden generar respuestas basadas
+            en una cadena de pensamientos. Esto significa que la IA
+            puede generar respuestas cohesivas y lógicas basadas en una
+            secuencia de pensamientos o ideas. Si preguntas a una
+            IA:</p>
+            <ul>
+            <li>¿Cuántos días hay en 7 años? te dará una respuesta
+            razonada.</li>
+            <li>En cambio si preguntas a una IA: ¿Cuántos días hay en 7
+            años? No me razones la respuesta, te dará el resultado.</li>
+            </ul>
+            <h3 data-number="4.4.4"
+            id="prompt-de-conocimiento-generado"><span
+            class="header-section-number">4.4.4</span> Prompt de
+            conocimiento generado</h3>
+            <p>En el prompt es necesario generar conocimiento para que
+            la IA pueda responder. Por ejemplo, si inventamos un juego
+            es necesario darle detalles sobre cómo se juega, cuáles son
+            los objetivos, cómo se gana, etc.</p>
+            <figure>
+            <img src="img/11.png"
+            alt="Prompt con conocimiento generado" />
+            <figcaption aria-hidden="true">Prompt con conocimiento
+            generado</figcaption>
+            </figure>
+            <h3 data-number="4.4.5" id="prompt-chaining"><span
+            class="header-section-number">4.4.5</span> Prompt
+            chaining</h3>
+            <p>Se trata de hacer una cadena de preguntas para que la IA
+            pueda responder a la segunda pregunta basándose en la
+            primera respuesta.</p>
+            <ul>
+            <li><strong>Primera Pregunta</strong>: ¿Qué es la
+            fotosíntesis?</li>
+            <li><strong>Primera Respuesta Generada</strong>: La
+            fotosíntesis es el proceso por el cual las plantas
+            convierten la luz solar en energía química, utilizando
+            dióxido de carbono y agua para producir glucosa y
+            oxígeno.</li>
+            <li><strong>Segunda Pregunta (Chaining)</strong>: ¿Por qué
+            es importante la fotosíntesis?</li>
+            <li><strong>Segunda Respuesta Generada</strong>: La
+            fotosíntesis es importante porque produce oxígeno, que es
+            esencial para la respiración de muchos seres vivos, y porque
+            convierte la energía solar en energía química que es
+            utilizada por las plantas para crecer.</li>
+            </ul>
+            <h3 data-number="4.4.6"
+            id="generación-de-recuperación-aumentada-rag"><span
+            class="header-section-number">4.4.6</span> Generación de
+            recuperación aumentada (RAG)</h3>
+            <ul>
+            <li><p><strong>Documento Proporcionado</strong>: Informe
+            sobre las técnicas de cultivo sostenible.</p></li>
+            <li><p><strong>Pregunta</strong>: ¿Cuáles son las técnicas
+            de cultivo sostenible más efectivas?</p></li>
+            <li><p><strong>Respuesta Basada en el Documento</strong>:
+            Las técnicas de cultivo sostenible más efectivas incluyen la
+            rotación de cultivos, el uso de cubiertas vegetales, y la
+            implementación de sistemas de riego eficientes para
+            conservar el agua y mejorar la salud del suelo.</p></li>
+            <li><p>Otros tipos de prompts: Además de los tipos de
+            prompts anteriores, también hay otros tipos de prompts que
+            se pueden utilizar para generar respuestas de la IA. Puedes
+            encontrar toda la información <a
+            href="https://www.promptingguide.ai/es/techniques">aquí</a>.
+            Muchas de estas técnicas se utilizan empleando algún
+            lenguaje de programación.</p></li>
+            </ul>
             <h1 data-number="5" id="creando-prompts-1"><span
             class="header-section-number">5</span> Creando prompts</h1>
             <p>En la <a
@@ -588,23 +740,325 @@ class="toc-section-number">6</span> Bibliografía</a></li>
             los estudiantes del departamento de Ciencias de la
             Computación.</p>
             </blockquote>
-            <h1 data-number="6" id="bibliografía"><span
-            class="header-section-number">6</span> Bibliografía</h1>
+            <h1 data-number="6"
+            id="descarga-tu-propio-modelo-en-tu-ordenador"><span
+            class="header-section-number">6</span> Descarga tu propio
+            modelo en tu ordenador</h1>
+            <p>A estas alturas, es importante tener claros los conceptos
+            de lo que es un modelo para IA. Estos modelos pueden ser:
+            text-to-text, text-to-image, image-to-text, text-to-sql,
+            etc. Esto es importante para poder descargar el modelo
+            adecuado para nuestra tarea.</p>
+            <p>En nuestro caso de modelos GPT, nos estamos centrando en
+            la generación de texto. Podemos descargar modelos que nos
+            permiten generar textos, traducciones, resúmenes, etc. Los
+            modelos que podemos descargar no ocupan mucho espacio en
+            nuestro ordenador, estamos hablando desde 1Gb hasta 70Gb o
+            más. ¡Y cuidado! Cuanto más grande no significa que el
+            modelo sea mejor; de hecho, en nuestro ordenador
+            preferiremos modelos más sencillos para que la generación de
+            texto sea más rápida.</p>
+            <p>Algunas de las opciones que podemos utilizar para
+            descargar el modelo son:</p>
+            <table>
+            <colgroup>
+            <col style="width: 33%" />
+            <col style="width: 33%" />
+            <col style="width: 33%" />
+            </colgroup>
+            <thead>
+            <tr>
+            <th>Aplicación</th>
+            <th>Descripción</th>
+            <th>Dónde descargar/utilizar</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><a
+            href="https://github.com/LostRuins/koboldcpp"><strong>Koboldcpp</strong></a></td>
+            <td>Un marco de trabajo de código abierto que permite a los
+            usuarios crear y personalizar sus propios modelos de
+            lenguaje. Es altamente personalizable y ofrece gran
+            flexibilidad.</td>
+            <td>Requiere compilación a partir del código fuente. Puedes
+            encontrar el código en repositorios como GitHub.</td>
+            </tr>
+            <tr>
+            <td><a href="https://lmstudio.ai/"><strong>LM
+            Studio</strong></a></td>
+            <td>Un entorno de desarrollo integrado (IDE) diseñado
+            específicamente para trabajar con modelos de lenguaje
+            grandes. Ofrece herramientas para entrenar, ajustar y
+            desplegar modelos.</td>
+            <td>Los proveedores más comunes son Hugging Face y otros
+            servicios en la nube que ofrecen acceso a GPUs.</td>
+            </tr>
+            <tr>
+            <td><a
+            href="https://anythingllm.com/desktop"><strong>AnythingLlm</strong></a></td>
+            <td>Similar a lmstudio.</td>
+            <td>Los proveedores más comunes son Hugging Face y otros
+            servicios en la nube que ofrecen acceso a GPUs.</td>
+            </tr>
+            <tr>
+            <td><strong>GPT4All</strong></td>
+            <td>Dispone de un modelo de lenguaje de código abierto
+            similar a GPT-3, pero diseñado para ser más pequeño y
+            eficiente. Puede ser ejecutado en dispositivos locales.
+            Permite conectar con OpenAI y otros proveedores.</td>
+            <td>Puedes descargar el modelo preentrenado y ejecutarlo en
+            tu ordenador. Los repositorios más comunes son GitHub.</td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Una página a tener en cuenta es <strong>Hugging
+            Face</strong>. Se trata de una plataforma que ofrece una
+            gran variedad de modelos de lenguaje preentrenados para
+            descargar y utilizar. Puedes encontrar más información en su
+            página web: <a
+            href="https://huggingface.co/">https://huggingface.co/</a>.
+            Te da una serie de tokens para probar diferentes
+            modelos.</p>
+            <p>En esta página puedes encontrar modelos de todo tipo,
+            desde generación de texto hasta generación de imágenes. Como
+            ejemplo, vamos a utilizar GPT4All y LM Studio para descargar
+            un modelo de lenguaje en nuestro ordenador y probarlo.</p>
+            <h2 data-number="6.1" id="lm-studio"><span
+            class="header-section-number">6.1</span> LM Studio</h2>
+            <p>Una de las cosas que más me gusta de LM Studio es que
+            tiene muchísimos parámetros que nos pueden ayudar a entender
+            cómo funciona un modelo de lenguaje. Además, nos permite
+            descargar modelos image-to-text, que nos permiten poner una
+            imagen y que nos genere un texto. Esto es muy útil para
+            generar descripciones de las imágenes. En primer lugar,
+            vamos a descargar LM Studio. Para ello, vamos a la página de
+            <a href="https://lmstudio.ai/">LM Studio</a> y hacemos clic
+            en el botón de descargar.</p>
+            <figure>
+            <img src="img/12.png" alt="Descargar LM Studio" />
+            <figcaption aria-hidden="true">Descargar LM
+            Studio</figcaption>
+            </figure>
+            <p>Una vez descargado, nos encontraremos con una interfaz de
+            la siguiente manera:</p>
+            <figure>
+            <img src="img/13.png" alt="Interfaz LM Studio" />
+            <figcaption aria-hidden="true">Interfaz LM
+            Studio</figcaption>
+            </figure>
+            <p>Desde aquí, podemos descargar los modelos que queramos.
+            Para ello, hacemos clic en el botón de
+            <strong>Download</strong> y nos aparecerá una ventana como
+            la siguiente:</p>
+            <figure>
+            <img src="img/14.png" alt="Descargar modelo" />
+            <figcaption aria-hidden="true">Descargar modelo</figcaption>
+            </figure>
+            <p>Recomendamos descargar el modelo más sencillo para
+            empezar a probarlo. Una vez descargado el modelo, podemos
+            comenzar a utilizarlo. Para ello, hacemos clic en el botón
+            de <strong>Load Model</strong> y seleccionamos el modelo que
+            hemos descargado. Nos aparecerá una ventana como la
+            siguiente en la que no modificaremos nada y haremos clic en
+            el botón de <strong>Load</strong>.</p>
+            <figure>
+            <img src="img/15.png" alt="Cargar modelo" />
+            <figcaption aria-hidden="true">Cargar modelo</figcaption>
+            </figure>
+            <p>Una parte importante es configurar LM Studio para que
+            funcione correctamente en nuestro ordenador. Para ello,
+            vamos a la pestaña de <strong>Developer</strong> y
+            configuramos los parámetros de runtime. Existen 3:</p>
+            <ul>
+            <li>CPU llama: Para que funcione con el procesador de
+            nuestro ordenador.</li>
+            <li>CUDA llama: Para que funcione con la tarjeta gráfica de
+            nuestro ordenador si es NVIDIA.</li>
+            <li>Vulkan llama: Para que funcione con la tarjeta gráfica
+            de nuestro ordenador AMD.</li>
+            </ul>
+            <figure>
+            <img src="img/16.png" alt="Configuración de LM Studio" />
+            <figcaption aria-hidden="true">Configuración de LM
+            Studio</figcaption>
+            </figure>
+            <figure>
+            <img src="img/17.png" alt="Configuración de LM Studio" />
+            <figcaption aria-hidden="true">Configuración de LM
+            Studio</figcaption>
+            </figure>
+            <div class="important">
+            <p>CUDA y Vulkan son motores para hacer funcionar el modelo
+            adecuadamente. Podemos utilizar siempre el procesador. Pero
+            si tienes una tarjeta gráfica (cuanto más actual, mejor),
+            estas están diseñadas para hacer muchos cálculos en paralelo
+            y por tanto, el modelo funcionará mucho más rápidamente.</p>
+            </div>
+            <h3 data-number="6.1.1"
+            id="personalizar-las-características-de-nuestro-modelo"><span
+            class="header-section-number">6.1.1</span> Personalizar las
+            características de nuestro modelo</h3>
+            <p>Cada modelo está entrenado de una manera determinada y
+            utilizando parámetros diferentes. Para poder personalizar
+            nuestro modelo, vamos a la pestaña de
+            <strong>Settings</strong> y podemos modificar los siguientes
+            parámetros:</p>
+            <ul>
+            <li><p><strong>Temperature</strong>: Este parámetro controla
+            la creatividad de la IA. Si aumentamos la temperatura, la IA
+            generará respuestas más creativas y diversas. Si disminuimos
+            la temperatura, la IA generará respuestas más conservadoras
+            y predecibles.</p></li>
+            <li><p><strong>Top K</strong>: Este parámetro controla el
+            número de palabras que la IA considera en cada paso de
+            generación. Si aumentamos el valor de K, la IA considerará
+            más palabras y generará respuestas más diversas. Si
+            disminuimos el valor de K, la IA considerará menos palabras
+            y generará respuestas más conservadoras.</p></li>
+            <li><p><strong>Top P</strong>: Este parámetro controla la
+            probabilidad acumulada de las palabras que la IA considera
+            en cada paso de generación. Si aumentamos el valor de P, la
+            IA considerará más palabras y generará respuestas más
+            diversas. Si disminuimos el valor de P, la IA considerará
+            menos palabras y generará respuestas más
+            conservadoras.</p></li>
+            <li><p><strong>Max Tokens</strong>: (Activando Limit
+            Response Length) Este parámetro controla el número máximo de
+            palabras que la IA generará en cada respuesta. Si aumentamos
+            el valor de Max Tokens, la IA generará respuestas más
+            largas. Si disminuimos el valor de Max Tokens, la IA
+            generará respuestas más cortas.</p></li>
+            <li><p><strong>Repeat Penalty</strong>: Este parámetro
+            controla la penalización para las repeticiones de palabras
+            en la respuesta. Si aumentamos el valor de Repeat Penalty,
+            la IA penalizará más las repeticiones de palabras. Si
+            disminuimos el valor de Repeat Penalty, la IA penalizará
+            menos las repeticiones de palabras.</p></li>
+            </ul>
+            <p>Existen otras configuraciones que no vamos a tratar.</p>
+            <figure>
+            <img src="img/18.png" alt="Configuración de LM Studio" />
+            <figcaption aria-hidden="true">Configuración de LM
+            Studio</figcaption>
+            </figure>
+            <p>También podemos acceder desde el botón Settings en el
+            extremo superior derecho de la pantalla.</p>
+            <p>Una vez lo tenemos todo configurado, ya podemos comenzar
+            a utilizar nuestro modelo. Para ello, escribiremos nuestro
+            primer prompt. Hemos hecho el mismo prompt cambiando algunos
+            parámetros para ver cómo cambia la respuesta.</p>
+            <figure>
+            <img src="img/19.png" alt="Prompt de LM Studio" />
+            <figcaption aria-hidden="true">Prompt de LM
+            Studio</figcaption>
+            </figure>
+            <div class="note">
+            <p>La gran ventaja de tener el modelo en nuestro ordenador
+            es que podré ajustarlo a nuestro gusto. Pero, a no ser que
+            lo necesites expresamente, es más útil utilizar los modelos
+            más comerciales. Una vez te ponga limitaciones, te dé
+            respuestas sesgadas o quieras utilizar datos sensibles, es
+            mejor tener el modelo en tu ordenador. Todo lo que escribes
+            en un chatbot queda registrado y puede ser utilizado para
+            otras cosas.</p>
+            </div>
+            <h2 data-number="6.2" id="gpt4all"><span
+            class="header-section-number">6.2</span> GPT4All</h2>
+            <p>GPT4All es otra herramienta que nos permite descargar el
+            modelo de lenguaje en nuestro ordenador y utilizarlo sin
+            necesidad de tener conexión a internet. Para ello, vamos a
+            la página de <a href="https://gpt4all.com/">GPT4All</a> y
+            hacemos clic en el botón de <strong>Download</strong>.</p>
+            <figure>
+            <img src="img/20.png" alt="Descargar GPT4All" />
+            <figcaption aria-hidden="true">Descargar
+            GPT4All</figcaption>
+            </figure>
+            <figure>
+            <img src="img/21.png" alt="Instalar GPT4All" />
+            <figcaption aria-hidden="true">Instalar GPT4All</figcaption>
+            </figure>
+            <p>Una vez descargado, haces doble clic para instalarlo. Una
+            vez instalado, tienes que ejecutarlo y nos aparecerá una
+            ventana como la siguiente:</p>
+            <figure>
+            <img src="img/22.png" alt="Interfaz GPT4All" />
+            <figcaption aria-hidden="true">Interfaz GPT4All</figcaption>
+            </figure>
+            <p>En la interfaz inicial, nos aparecen 3 elementos que es
+            lo que principalmente debemos configurar:</p>
+            <ol type="1">
+            <li>Buscar modelos e instalarlos.</li>
+            <li>Documentos locales.</li>
+            <li>Iniciar chat.</li>
+            </ol>
+            <p>En primer lugar, vamos a modelos y hacemos clic en
+            agregar modelo:</p>
+            <figure>
+            <img src="img/23.png" alt="Agregar modelo" />
+            <figcaption aria-hidden="true">Agregar modelo</figcaption>
+            </figure>
+            <p>Escogeremos los siguientes modelos para instalar. Son
+            bastante sencillos pero son mucho más rápidos:</p>
+            <figure>
+            <img src="img/24.png" alt="Agregar modelo" />
+            <figcaption aria-hidden="true">Agregar modelo</figcaption>
+            </figure>
+            <p>Si vamos a Config, podemos seleccionar un modelo y
+            configurar los parámetros tal y como hemos hecho con LM
+            Studio.</p>
+            <figure>
+            <img src="img/25.png" alt="Configurar modelo" />
+            <figcaption aria-hidden="true">Configurar
+            modelo</figcaption>
+            </figure>
+            <p>También es importante configurar el motor de cálculo, en
+            este caso CUDA, para que funcione con mi tarjeta gráfica
+            (NVIDIA). Si no tienes tarjeta gráfica, selecciona CPU.</p>
+            <figure>
+            <img src="img/28.png" alt="Configurar motor de cálculo" />
+            <figcaption aria-hidden="true">Configurar motor de
+            cálculo</figcaption>
+            </figure>
+            <p>Una de las características más importantes de GPT4All es
+            la capacidad para hacer uso de documentos locales
+            (recordemos RAG). Para ello, vamos a la pestaña de
+            <strong>Datos locales</strong> y hacemos clic en el botón de
+            <strong>Agregar colección de documentos</strong>.</p>
+            <figure>
+            <img src="img/26.png" alt="Agregar colección" />
+            <figcaption aria-hidden="true">Agregar
+            colección</figcaption>
+            </figure>
+            <p>Es necesario que seleccionemos una carpeta donde
+            pondremos todos los documentos, después tardará un rato en
+            indexarlos.</p>
+            <figure>
+            <img src="img/27.png" alt="Agregar colección" />
+            <figcaption aria-hidden="true">Agregar
+            colección</figcaption>
+            </figure>
+            <p>Finalmente, haremos una pregunta a la IA. Debemos
+            seleccionar un modelo a utilizar y una de las colecciones
+            que tenemos:</p>
+            <figure>
+            <img src="img/30.png" alt="Prompt de GPT4All" />
+            <figcaption aria-hidden="true">Prompt de
+            GPT4All</figcaption>
+            </figure>
+            <p>Podemos ver cómo nos da un resumen de la ley que aparece
+            en el DOGCV.</p>
+            <div class="note">
+            <p>En la próxima unidad veremos que existe la aplicación web
+            chatpdf que nos permitirá hacer lo mismo.</p>
+            </div>
+            <h1 data-number="7" id="bibliografía"><span
+            class="header-section-number">7</span> Bibliografía</h1>
             <p>Existe una <a
             href="https://www.promptingguide.ai/ca">página muy
             interesante</a> sobre la creación de prompts que os
             recomendamos leer.</p>
-            <section id="footnotes"
-            class="footnotes footnotes-end-of-document"
-            role="doc-endnotes">
-            <hr />
-            <ol>
-            <li id="fn1"><p>En el transcurso de la creación de estos
-            materiales ha cambiado su nombre a Gemini. Antes se llamaba
-            <strong>Bard</strong>.<a href="#fnref1"
-            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-            </ol>
-            </section>
         </main>
         
 
