@@ -188,31 +188,6 @@ Hemos visto que todas ellas presentan una versión de pago. En principio en la m
 :::
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Entonces, qué herramienta tengo que elegir
 
 Aquella que mejor se adapte a tus necesidades y a sus respuestas. Cada una de ellas ha tenido un entrenamiento diferente, por lo tanto a medida que vayas trabajando en cada una de ellas verás que siempre tiendes a utilizar la misma.
@@ -356,16 +331,6 @@ Se trata de hacer una cadena de preguntas para que la IA pueda responder a la se
 * **Respuesta Basada en el Documento**: Las técnicas de cultivo sostenible más efectivas incluyen la rotación de cultivos, el uso de cubiertas vegetales, y la implementación de sistemas de riego eficientes para conservar el agua y mejorar la salud del suelo.
 
 * Otros tipos de prompts: Además de los tipos de prompts anteriores, también hay otros tipos de prompts que se pueden utilizar para generar respuestas de la IA. Puedes encontrar toda la información [aquí](https://www.promptingguide.ai/es/techniques). Muchas de estas técnicas se utilizan empleando algún lenguaje de programación.
-
-
-
-
-
-
-
-
-
-
 
 # Creando prompts
 
@@ -525,3 +490,4 @@ En la próxima unidad veremos que existe la aplicación web chatpdf que nos perm
 # Bibliografía
 
 Existe una [página muy interesante](https://www.promptingguide.ai/ca) sobre la creación de prompts que os recomendamos leer.
+
