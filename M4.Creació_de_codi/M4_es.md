@@ -396,6 +396,53 @@ No es necesario saber programar para utilizar la plataforma, sino saber escribir
 
 
 
+# PartyRock
+
+[PartyRock](https://partyrock.aws/) es una plataforma creada por AWS que nos permite combinar diferentes modelos y aprovechar preguntas y respuestas creadas por diferentes IA para crear un prototipo de una aplicación. Se trata de una aplicación muy potente a la cual le dedicamos un curso de 10 horas para poder practicar con ella.
+
+![PartyRock](img/79.png){ width=70% }
+
+Cuando entramos podemos ir a "generate APP":
+
+![Generate APP](img/80.png){ width=70% }
+
+Y podemos escribir un prompt para que nos cree un prototipo de una aplicación.
+
+![Prompt](img/81.png){ width=70% }
+
+Pero para poder crear un prompt es importante que sepamos cómo funciona, por eso iré a "Build manually".
+
+![Build manually](img/82.png){ width=70% }
+
+La aplicación tiene un lienzo donde podemos añadir widgets. Si hacemos clic en el botón "Add widget" podemos ver que nos aparecen diferentes widgets que podemos añadir a nuestra aplicación. Hay 3 widgets potenciados con IA y 3 para hacer una entrada. Los widgets que nos podemos encontrar son:
+
+![Widgets](img/83.png){ width=70% }
+
+| Widget | Descripción |
+|--------|-------------|
+| User Input | Entrada de texto |
+| Static Text | Explicación o un texto en concreto. También podemos utilizarlo como una entrada estática |
+| Document | Para subir un documento |
+| Text generation | Alimentado con IA. Crea una entrada del prompt |
+| Image generation | Alimentado con IA. Crea una imagen |
+| Chatbot | Un chat para formular cuestiones |
+
+En cada uno de los widgets hay que poner un prompt para que la IA nos dé una respuesta. Si queremos referenciar a otros widgets, tenemos que poner una @ y el nombre del widget. Aquí os pondríamos un ejemplo extremadamente sencillo de cómo hacerlo:
+
+![Ejemplo](img/84.png){ width=70% }
+
+Y este sería el resultado:
+
+![Resultado](img/85.png){ width=70% }
+
+Obviamente, este ejemplo es muy sencillo, pero podemos hacer cosas mucho más complejas.
+
+:::note
+En Aules os hemos dejado un tutorial de ejemplo de una aplicación.
+:::
+
+
+
 # Creem una unitat en Aules
 
 En aquest apartat anem a crear una unitat des de 0, ja vos hem comentat que sempre és important tindre unes nocions bàsiques sobre el que s'està preguntant. Anem a fer la nostra prova en el nostre [Aules docent](https://aules.edu.gva.es/docent/my/).

@@ -513,6 +513,36 @@ Personalmente [ChaPDF](https://www.chatpdf.com) es una de las aplicaciones que m
 Algunos PDF pueden ser demasiado grandes y no los acepta. Por lo tanto, es necesario subir PDF comprimidos (utilizando la herramienta de [https://www.ilovepdf.com/es/comprimir_pdf](https://www.ilovepdf.com/es/comprimir_pdf)).
 :::
 
+# Notebook LM
+
+Personalmente, esta herramienta es una de las que más me gusta. Al igual que ChatPDF, puedes subir documentos, vídeos o simplemente pegar texto (hasta 50 fuentes) y hacerle preguntas, pero dispone de otras características que resultan muy interesantes. Puedes encontrar la herramienta [aquí](https://notebooklm.google.com/). Se trata de una herramienta totalmente gratuita y utiliza el modelo de Gemini 2.0.
+
+![Notebook LM document](img/63.png)
+
+Una vez nos registremos (con un correo de Google) tendremos acceso a la plataforma:
+
+![Notebook LM](img/64.png)
+
+Podemos ver un entorno como este, en la parte derecha podemos subir los documentos con los que queremos hablar, nos puede hacer resúmenes, audios (de momento en inglés), nos puede hacer preguntas, etc.
+
+![Notebook LM](img/66.png)
+
+Si hacemos clic en "Añadir Fuente" (hasta 50 documentos), podemos ver que nos permite subir documentos con diferentes tipos de formatos (audio en mp3, pdf, sitios web, videos de YouTube o simplemente copiar y pegar texto).
+
+![Fuentes](img/65.png)
+
+Hemos probado a hacer un resumen de un documento del DOGV (que probablemente no estará entrenado con legislación actual) para probar la herramienta y podemos ver el resultado. El resumen es bastante acertado:
+
+![Resumen](img/67.png)
+
+Podemos realizar preguntas más genéricas y podemos ver que el razonamiento es bastante acertado:
+
+![Pregunta](img/68.png)
+
+Y una de las características que más me gusta (aunque de momento está en inglés) es que te hace un resumen con audio. Parecen dos personas conversando con una voz totalmente normal, no es robótica ni parece creada por una IA.
+
+![Audio](img/69.png)
+
 ## Geospy
 
 [Geospy](https://geospy.web.app/) es una herramienta que nos permite conocer el lugar de donde es una imagen. Es muy interesante porque te da un razonamiento de por qué cree que es ese lugar u otro. Muchos pensarán que utiliza los metadatos para saberlo pero, dados los razonamientos, te hacen dudar. Los resultados suelen ser bastante certeros, pero en el ejemplo podemos ver que no siempre es fiable (se trata de una fotografía de la superficie de la luna):
