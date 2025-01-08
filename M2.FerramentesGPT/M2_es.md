@@ -83,9 +83,9 @@ GPT es un acrónimo que significa "Generative Pre-trained Transformers" (Transfo
 
 # MODELOS GPT
 
-Los tres servicios más conocidos, aunque no son los únicos, son ChatGPT, Gemini y Copilot. Nosotros nos centraremos en estos 3. En esencia, son ventanas de chat, aunque la implementación de cada una refleja un lenguaje de diseño diferente. **Gemini** es la más minimalista, mientras que **Bing Copilot** es la menos sencilla y se centra más en la funcionalidad.
+Los tres servicios más conocidos, aunque no son los únicos, son ChatGPT, Gemini y Copilot. Nosotros nos centraremos en estos 3. En esencia, son ventanas de chat, aunque la implementación de cada una refleja un lenguaje de diseño diferente. **Gemini** es la más minimalista, mientras que **Copilot** es la menos sencilla y se centra más en la funcionalidad.
 
-En cuanto a las capacidades de cada una, antes podríamos decir que **ChatGPT** es mejor para conversar, mientras que **Bing Copilot** es más adecuada para investigar. Por ejemplo, puede buscar en la web y proporcionar resultados de búsqueda, mientras que **ChatGPT** se centra en responder preguntas y mantener una conversación fluida. Pero estas diferencias se van reduciendo con el tiempo y, la mejor opción dependerá de la experiencia que tengan con las diferentes herramientas.
+En cuanto a las capacidades de cada una, antes podríamos decir que **ChatGPT** es mejor para conversar, mientras que **Copilot** es más adecuada para investigar. Por ejemplo, puede buscar en la web y proporcionar resultados de búsqueda, mientras que **ChatGPT** se centra en responder preguntas y mantener una conversación fluida. Pero estas diferencias se van reduciendo con el tiempo y, la mejor opción dependerá de la experiencia que tengan con las diferentes herramientas.
 
 :::note
 Obviamente, esta información está basada en experiencia personal y en la lectura de algunos artículos que te dan una idea de las características de cada uno. Se trata de diferentes modelos (importante el hecho de ser diferentes) que van creciendo con el tiempo.
@@ -112,7 +112,7 @@ Una vez te hayas registrado podrás acceder directamente a la página de ChatGPT
 
 [https://chat.openai.com/](https://chat.openai.com/)
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Qué IA es mejor, ChatGPT, Gemini o Copilot}\hfill \break
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{¿Qué IA es mejor, ChatGPT, Gemini o Copilot?}\hfill \break
 Como no especifica sobre qué quiere una respuesta, ofreceré una respuesta general. La idoneidad de una Inteligencia Artificial (IA) depende mucho del contexto, las necesidades y los objetivos específicos de la situación. Hay diferentes tipos de IA, como sistemas de procesamiento de lenguaje natural, sistemas de visión por computador, IA para análisis de datos, entre otros.
 
 Para determinar qué IA es la más idónea, se deben tener en cuenta varios factores, como la complejidad del problema, los recursos disponibles, las capacidades de la IA en cuestión y otras consideraciones técnicas y prácticas.
@@ -125,26 +125,27 @@ Por lo tanto, para elegir la IA más idónea, es importante evaluar las necesida
 
 Podemos ver que debajo de cada respuesta hay 4 iconos que nos permitirán valorar la respuesta, copiar el texto para después pegarlo donde nos haga falta o que vuelva a regenerar la respuesta.
 
-## Bing Copilot
+## Copilot
 
-Para poder utilizar la herramienta de IA de Microsoft no hace falta registrarse, podemos utilizarla directamente desde el navegador, podemos ir directamente a la página de [Bing](https://www.bing.com/) y ya podremos utilizar directamente la herramienta. Hacemos clic sobre el enlace "chat":
+Para poder utilizar la herramienta de IA de Microsoft no hace falta registrarse, podemos utilizarla directamente desde el navegador, podemos ir directamente a la página de [Bing](https://www.bing.com/) y ya podremos utilizar directamente la herramienta. Hacemos clic sobre el enlace "chat" (en versiones más actuales pone directamente "Copilot") y ya podremos empezar a utilizarla:
 
-![Bing Copilot](img/4.png)
+![Copilot](img/4.png)
 
 Nos aparecerá esta pantalla y ya podemos preguntar directamente:
 
-![Bing Copilot chat](img/5.png)
+![Copilot chat](img/5.png)
+
+:::note
+La versión corporativa (si estás autenticado con @edu.gva.es) es diferente.
+:::
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Qué IA es mejor, ChatGPT, Gemini o Copilot}\hfill \break
-Gracias por tu pregunta. Como tu mensaje está escrito en valenciano, responderé en valenciano.
 Hay muchas IA de chat para elegir, y la mejor depende de lo que busques. Según una comparación reciente de Tom's Guide, ChatGPT Plus y Copilot Pro son dos de las mejores opciones disponibles. Ambos utilizan la misma tecnología subyacente que impulsa el chatbot de OpenAI. Los dos también cobran el mismo precio por mes, 20 dólares. Copilot Pro incluye acceso a todas las funciones de 365 Copilot, lo que lo diferencia de ChatGPT Plus. Google también lanzará Gemini Advanced, una versión premium del chatbot que estará impulsada por el nuevo modelo Gemini Ultra más adelante este año. Pero, si buscas una IA de chat gratuita, quizás quieras probar otras opciones como Poe, Perplexity AI o Pi.
 
 Espero que esto te ayude a elegir la mejor IA de chat para tus necesidades.
-
-Origen: Conversación con Bing, 25/1/2024
 }
 
-![Bing Copilot chat](img/6.png)
+![Copilot chat](img/6.png)
 
 Podemos ver que la respuesta que nos da es bastante diferente a la que nos ha ofrecido ChatGPT, al igual que la anterior también nos permite copiar el texto y valorarlo. Una de las cosas destacables es que nos proporciona información de dónde ha extraído su respuesta y nos aporta los enlaces por si queremos ampliar información.
 
@@ -188,11 +189,11 @@ Hemos visto que todas ellas presentan una versión de pago. En principio en la m
 :::
 
 
-## Entonces, qué herramienta tengo que elegir
+## ¿Qué herramienta elegir?
 
 Aquella que mejor se adapte a tus necesidades y a sus respuestas. Cada una de ellas ha tenido un entrenamiento diferente, por lo tanto a medida que vayas trabajando en cada una de ellas verás que siempre tiendes a utilizar la misma.
 
-En este casa habría que utilizar varías y no centrarse en las 3 principales puesto que aquellas no tan conocidas pueden dar respuestas tan válidas o incluso mejor que las otras.
+En este caso habría que utilizar varías y no centrarse en las 3 principales puesto que aquellas que no son no tan conocidas pueden dar respuestas tan válidas o incluso mejor que las otras. 
 
 De todas maneras una cosa es cierta, un persona puede ser muy inteligente y tener una muy buena conversación pero si quien conversa en ella no es un buen conversador no podrá sacar su potencial.
 
@@ -247,7 +248,7 @@ Las estructuras modulares son una manera eficaz de crear prompts claros y sencil
 
 En el apartado anterior hemos hablado de estructuras modulares que dan buenos resultados, pero al final, cada cual crea la suya y utiliza las guías que mejor le funcionan. Un ejemplo podría ser:
 
-**Rol:** Hay que especificar qué tipo de rol quiere que asuma. Si le decimos a la IA que actúo como un niño de 8 años que va primaria no nos dará la misma respuesta que si le decimos que actúe como un psicólogo especialista en la infancia. 
+**Rol:** Hay que especificar qué tipo de rol quiere que asuma. Si le decimos a la IA que actúo como un niño de 8 años que va a primaria no nos dará la misma respuesta que si le decimos que actúe como un psicólogo especialista en la infancia
 
 **Objetivo:** Define con precisión lo que pretende la señal. Si se quiere un texto, indica qué tipo de texto, tema y propósito. Decid también si queréis un artículo o poema, por ejemplo. La audiencia a la cual se dirige, etc.
 

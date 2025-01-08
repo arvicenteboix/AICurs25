@@ -1,6 +1,6 @@
 ---
 # Información general del documento
-title: 4. Creación de código.
+title: 4. Creación de código
 lang: es
 page-background: img/bg.png
 linkcolor: blue
@@ -18,7 +18,7 @@ toc-own-page: true
 toc-title: Contenidos
 
 # Cabeceras y pies
-header-left: 4. Creación de código. 
+header-left: Creación de código. 
 header-right: Curso 2024-2025
 footer-left: CEFIRE FP
 footer-right: \thepage/\pageref{LastPage}
@@ -186,7 +186,7 @@ Este es un ejemplo de lo que se puede hacer, pero no se os pide en ningún momen
 Programar puede acabar resultando una tarea verdaderamente estresante.
 :::
 
-# Vamos a crear un juego con python también
+# Creación de un juego con Python
 
 Crear un juego no es una tarea sencilla y vamos a utilizar una biblioteca de python llamada *Pygame* que es muy sencilla de utilizar. Personalmente no la he utilizado nunca. Pero podremos ver que no solo hay que realizar un comando para realizar el juego, sino que habrá que ir dándole instrucciones para que vaya cambiando las cosas que no entiende de lo que nosotros queremos.
 
@@ -198,7 +198,7 @@ Puede parecer una tarea sencilla tal y como voy a plantearles, pero el prompt qu
 
 La plataforma que hemos utilizado es Copilot y el prompt planteado ha sido el siguiente:
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un juego con la biblioteca Pygame para python que tenga una pantalla estática con una plataforma del 20% del total de la ventana que pueda desplazarse a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y se actualizará la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45º en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45º hacia arriba y si rebota en la mitad izquierda de la plataforma se irá hacia la izquierda con un ángulo de 45º hacia arriba. Al principio habrá una bola encima de la tabla sin moverse y cuando se pulse la tecla espacio, la bola comenzará a moverse hacia arriba. Escribe solo el código, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un juego con la biblioteca Pygame para python que tenga una pantalla estática con una plataforma del 20 por ciento del total de la ventana que pueda desplazarse a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y se actualizará la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45 grados en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45 grados hacia arriba y si rebota en la mitad izquierda de la plataforma se irá hacia la izquierda con un ángulo de 45 grados hacia arriba. Al principio habrá una bola encima de la tabla sin moverse y cuando se pulse la tecla espacio, la bola comenzará a moverse hacia arriba. Escribe solo el código, sin comentarios y de la manera más resumida posible.\newline No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.}
 
 La respuesta tal cual ha sido:
 
@@ -382,7 +382,7 @@ time.sleep(0.1)
 
 Replit es una plataforma muy potente y puede servirnos para introducir a los alumnos a la programación comenzando con cosas mucho más sencillas como:
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un programa que abra una ventana y me pregunte mi nombre, luego cierre esa ventana y abra otra ventana que diga Hola + mi nombre y espere hasta que yo cierre esa ventana.}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea un programa que abra una ventana y me pregunte mi nombre, luego cierre esa ventana y abra otra ventana que diga Hola + mi nombre y espere hasta que yo cierre esa ventana.}}
 
 ![Programa](img/29.png){ width=70% }
 
@@ -443,13 +443,13 @@ En Aules os hemos dejado un tutorial de ejemplo de una aplicación.
 
 
 
-# Creem una unitat en Aules
+# Creamos una unidad en Aules
 
-En aquest apartat anem a crear una unitat des de 0, ja vos hem comentat que sempre és important tindre unes nocions bàsiques sobre el que s'està preguntant. Anem a fer la nostra prova en el nostre [Aules docent](https://aules.edu.gva.es/docent/my/).
+En este apartado vamos a crear una unidad desde cero, ya os hemos comentado que siempre es importante tener unas nociones básicas sobre lo que se está preguntando. Vamos a hacer nuestra prueba en nuestro [Aules docente](https://aules.edu.gva.es/docent/my/).
 
 :::tip
-Teniu opcions gratuïtes de moodle com [milaulas](https://www.milaulas.com/)
-per a poder fer proves si no voleu utilitzar el Aules docent.
+Tenéis opciones gratuitas de moodle como [milaulas](https://www.milaulas.com/)
+para poder hacer pruebas si no queréis utilizar el Aules docente.
 :::
 
 
@@ -473,7 +473,7 @@ El curso tarda un poco en crearse, así que no se preocupen.
 
 Y añadimos una sección.
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea una división en html con un título que diga La célula y la fuente sea de color blanco, que tenga un fondo con los bordes redondeados que ocupe el 100% de su sección y el fondo sea de varias franjas alternas inclinadas 45 grados con los colores 4C4B16 y un color un poco más oscuro. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestres solo el contenido del body.}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea una división en html con un título que diga La célula y la fuente sea de color blanco, que tenga un fondo con los bordes redondeados que ocupe el 100 \% de su sección y el fondo sea de varias franjas alternas inclinadas 45 grados con los colores 4C4B16 y un color un poco más oscuro. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestres solo el contenido del body.}}
 
 El resultado ha sido el siguiente:
 
@@ -499,7 +499,7 @@ El resultado se vería de esta manera:
 
 Podemos crear títulos más pequeños modificando un poco el prompt:
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea una división en html con un título pequeño que diga "Contenidos" y esté alineado a la izquierda. La fuente del título sea de color blanco y tenga un fondo con los bordes redondeados que ocupe el 100% de su sección y el fondo sea de varias franjas alternas inclinadas 45 grados con los colores #898121 y un color un poco más oscuro. La altura de todo el contenido no debe ser muy grande. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestres solo el contenido del body.}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea una división en html con un título pequeño que diga "Contenidos" y esté alineado a la izquierda. La fuente del título sea de color blanco y tenga un fondo con los bordes redondeados que ocupe el 100\% de su sección y el fondo sea de varias franjas alternas inclinadas 45 grados con los colores \#898121 y un color un poco más oscuro. La altura de todo el contenido no debe ser muy grande. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestres solo el contenido del body.}}
 
 El resultado ha sido el siguiente:
 
@@ -655,7 +655,7 @@ Ahora podremos ver las preguntas que hemos creado:
 ![Preguntas](img/45.png){ width=90% }
 
 :::tip
-A partir de ahora, les recomiendo estos pasos para tener las preguntas un poco más organizadas en su curso.
+A partir de ahora, os recomiendo estos pasos para tener las preguntas un poco más organizadas en su curso.
 :::
 
 Seleccionamos todas las preguntas y desplegamos el menú de abajo y hacemos clic en "Mover a...":
