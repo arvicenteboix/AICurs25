@@ -175,11 +175,6 @@ Algunas aplicaciones destacadas de los LLM son:
 
 Estas aplicaciones resaltan cómo los LLM están transformando la forma en que las máquinas interactúan con el lenguaje humano, abriendo nuevas posibilidades en diversas áreas.
 
-
-## Modelos de Difusión
-
-Los modelos de difusión, como DALL-E, son modelos generativos avanzados que utilizan técnicas de difusión para generar imágenes. Estos modelos se basan en la difusión probabilística, que es un proceso estocástico para generar datos complejos paso a paso. En lugar de generar directamente píxeles de una imagen, los modelos de difusión generan una imagen al "difundiendo" gradualmente información a través de múltiples pasos, lo que permite capturar patrones complejos y estructuras en los datos.
-
 ## Modelos de difusión
 
 Los modelos de difusión, como DALL-E, son modelos generativos avanzados que utilizan técnicas de difusión para generar imágenes. Estos modelos se basan en la difusión probabilística, que es un proceso estocástico para generar datos complejos paso a paso. En lugar de generar directamente píxeles de una imagen, los modelos de difusión generan una imagen "difundiendo" gradualmente información a través de múltiples pasos, lo cual permite capturar patrones complejos y estructuras en los datos.

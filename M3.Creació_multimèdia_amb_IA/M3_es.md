@@ -12,9 +12,9 @@ titlepage-text-color: eeeee4
 titlepage-background: img/U3c.png
 
 # Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
 # Cabeceras y pies
 header-left: 3. Creación multimedia con IA

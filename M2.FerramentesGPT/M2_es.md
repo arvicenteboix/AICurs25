@@ -13,9 +13,9 @@ titlepage-text-color: eeeee4
 titlepage-background: img/U2c.png
 
 # Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
 # Cabeceras y pies
 header-left: 2. Herramientas GPT
@@ -69,6 +69,7 @@ pandoc-latex-environment:
 Este documento está sujeto a una licencia creative commons que permite su difusión y uso comercial reconociendo siempre la autoría de su creador. Este documento se encuentra para ser modificado en el siguiente repositorio de github:
 <!-- CANVIAR L'ENLLAÇ -->
 [https://github.com/arvicenteboix/AICurs25](https://github.com/arvicenteboix/AICurs25)
+
 \newpage
 
 # Introducción
@@ -335,7 +336,7 @@ Se trata de hacer una cadena de preguntas para que la IA pueda responder a la se
 
 # Creando prompts
 
-En la [siguiente página](https://www.iberestudios.como/noticias/21-prompts-o-formas-de-preguntar-a-chatgpt-para-obtener-resultados-asombrosos/) podemos encontrar una serie de ejemplos de como crear buenos prompts:
+En la [siguiente página](https://www.iberestudios.com/noticias/21-prompts-o-formas-de-preguntar-a-chatgpt-para-obtener-resultados-asombrosos/) podemos encontrar una serie de ejemplos de como crear buenos prompts:
 
 > Por favor, actúa como un narrador. Inventarás historias entretenidas que sean atractivas, imaginativas y cautivadoras para el público. Pueden ser cuentos de hadas, historias educativas o cualquier otro tipo de historia que tenga el potencial de capturar la atención y la imaginación de las personas. Dependiendo del público objetivo, puedes elegir temas o temas específicos para tu sesión de cuentos. Por ejemplo, si son niños, puedes hablar sobre animales; si son adultos, los cuentos basados en la historia pueden involucrarlos mejor, etc. Mi primera solicitud es «Necesito una historia interesante sobre la perseverancia».
 
