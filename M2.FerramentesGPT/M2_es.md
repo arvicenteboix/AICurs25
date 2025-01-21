@@ -439,7 +439,7 @@ La gran ventaja de tener el modelo en nuestro ordenador es que podré ajustarlo 
 
 ## GPT4All
 
-GPT4All es otra herramienta que nos permite descargar el modelo de lenguaje en nuestro ordenador y utilizarlo sin necesidad de tener conexión a internet. Para ello, vamos a la página de [GPT4All](https://gpt4all.com/) y hacemos clic en el botón de **Download**.
+GPT4All es otra herramienta que nos permite descargar el modelo de lenguaje en nuestro ordenador y utilizarlo sin necesidad de tener conexión a internet. Para ello, vamos a la página de [GPT4All](https://gpt4all.io/index.html?ref=top-ai-list) y hacemos clic en el botón de **Download**.
 
 ![Descargar GPT4All](img/20.png)
 
